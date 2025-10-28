@@ -14,17 +14,17 @@ heroi = {
     "tipo": "barbaro",
     "nome": "Conan",
     "hp": 100,
-    "ataque_base": 10,
-    "defesa": 5,
-    "experiencia": 0,
+    "ataque_base": 15,
+    "defesa": 10,
+    "experiencia": 1,
     "nivel": 1,
-    "cabeca": 0,
-    "pescoco": 0,
-    "torso": 0,
-    "braços": 0,
-    "dedos": 0,
-    "pernas": 0,
-    "pes": 0,
+    "cabeca": 5,
+    "pescoco": 2,
+    "torso": 5,
+    "bracos": 2,
+    "dedos": 2,
+    "pernas": 2,
+    "pes": 2,
 }
 
 # --- Funções Principais do Jogo ---
@@ -57,12 +57,23 @@ def verificar_e_subir_nivel():
 
 # APLICA AS MELHORIAS QUANDO ACHA UM BAU NORMAL
 def aplicar_melhoria_aleatoria(heroi):
-    # Aplica uma melhoria aleatória nas estatísticas do herói.
-    atributos = ["ataque_base", "defesa"]
+    # Aplica uma melhoria aleatória em algum dos atributos do herói listado abaixo.
+    atributos = [
+        "ataque_base",
+        "defesa",
+        "cabeca",
+        "pescoco",
+        "torso",
+        "braços",
+        "dedos",
+        "pernas",
+        "pes",
+    ]
     escolha_atributo = random.choice(atributos)
-
-    heroi[escolha_atributo] += 1
-    print(f"O herói ganhou +1 ponto em {escolha_atributo}!")
+    heroi[escolha_atributo] == heroi[escolha_atributo] + (
+        heroi[escolha_atributo] // 10
+    )  # Aumenta 10% do valor atual
+    print(f"O herói ganhou 10% de pontos de melhoria em {escolha_atributo}!")
 
     return escolha_atributo
 
@@ -75,6 +86,38 @@ def aplicar_melhoria_rara(heroi):
     heroi["hp_maximo"] += 5
     heroi["hp_atual"] += 5
     print("O herói obteve melhorias raras!")
+
+
+def calcular_ataque(heroi):
+    # Calcula o ataque base total do herói, incluindo bônus de equipamento.
+    ataque_total = (
+        heroi["ataque_base"]
+        + heroi["cabeca"]
+        + heroi["pescoco"]
+        + heroi["torso"]
+        + heroi["braços"]
+        + heroi["dedos"]
+        + heroi["pernas"]
+        + heroi["pes"]
+    )
+    print(f"Ataque total do herói: {ataque_total}")
+    return ataque_total
+
+
+def calcular_defesa(heroi):
+    # Calcula o ataque base total do herói, incluindo bônus de equipamento.
+    defesa_total = (
+        heroi["defesa"]
+        + heroi["cabeca"]
+        + heroi["pescoco"]
+        + heroi["torso"]
+        + heroi["braços"]
+        + heroi["dedos"]
+        + heroi["pernas"]
+        + heroi["pes"]
+    )
+    print(f"Ataque total do herói: {defesa_total}")
+    return defesa_total
 
 
 # ---INICIAR BATALHAS ---
@@ -221,7 +264,7 @@ def evento_bau_tesouro(heroi, iniciar_batalha):
 
         # 3. TESOURO VALIOSO (0.5%)
         elif utils.jogar_dado(1000) == 5:
-            print("INCRÍVEL!!! VOCÊ ENCONTROU UM TESOU LENDÁRIO!!!")
+            print("INCRÍVEL!!! VOCÊ ENCONTROU UM TESOURO LENDÁRIO!!!")
             aplicar_melhoria_rara()
             utils.pausar()
             return "CONTINUAR", None, None
@@ -235,7 +278,7 @@ def evento_bau_tesouro(heroi, iniciar_batalha):
 
     elif acao_bau == "2":
         print(
-            "Você decidiu que o risco de abrir o baú não vale a pena e decide não abrí-lo."
+            "Você decidiu que o risco de abrir o baú não vale a pena e decide ir embora sem abrí-lo."
         )
         utils.pausar()
         return "CONTINUAR", None, None
@@ -255,31 +298,75 @@ def explorar_floresta(hero, iniciar_batalha):
     resultado = None
 
     while True:
-        print("\n--- AÇÕES NA FLORESTA ---")
-        print("1. Avançar e Explorar")
+        print("\n--- AÇÕES NA FLORESTA SOMBRIA ---")
+        print("1. Avançar e continuar a jornada")
+        # 1. Encontra Bau
+        # 1.1 Não abre
+        # 1.2 Abre
+        # 1.2.1 Encontra Tesouro Lendário (0-1)
+        # 1.2.2 Encontra Tesouro Bom
+        # 1.2.3 Encontra Tesouro Simples
+        # 1.2.4 Bau com armadilha
+        # 1.2.4.1 Monstro (atq. surpresa (extra))
+        # 1.2.4.2 Veneno
+        # 1.2.4.3
+        # Bau vazio
+        # 3. Encontra Caminho Livre (21-59)
+        # 4. Encontro com Monstro (60-100)
+        print("2. Explorar a procura de tesouros")
+        # 1. Encontra Bau
+        # 1.1 Não abre
+        # 1.2 Abre
+        # 1.2.1 Encontra Tesouro Lendário (0-1)
+        # 1.2.2 Encontra Tesouro Bom
+        # 1.2.3 Encontra Tesouro Simples
+        # 1.2.4 Bau com armadilha
+        # 1.2.4.1 Monstro (atq. surpresa (extra))
+        # 1.2.4.2 Veneno
+        # 1.2.4.3
+        # Bau vazio
+        # 4. Encontro com Monstro (60-100)
         print("0. Voltar para a Encruzilhada Principal")
 
-        acao = input("Escolha a sua ação: ")
+        acao = input("Escolha o que vai fazer: ")
 
         if acao == "1":
-            evento_roll = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
 
-            print(f"\n* O Herói avança... (Roll: {evento_roll}) *")
+            print(
+                f"\n* O Herói avança e continua dentro da FLORESTA SOMBRIA... (Roll: {evento_roll_dice}) *"
+            )
             time.sleep(1)
 
-            # --- LÓGICA DE EVENTOS BASEADA NO ROLL ---
+            # --- LÓGICA DE EVENTOS BASEADA ROLL DICE ---
 
-            # 1. Tesouro Raro (0-2)
-            if evento_roll <= 2:
+            if evento_roll_dice <= 1:
                 print(
-                    "💎 VOCÊ ENCONTROU UM TESOURO RARO! O seu ataque base aumenta permanentemente!"
+                    "💎 VOCÊ ENCONTROU UM TESOURO RARO! Você ganhou várias melhorias nos teus atributos!"
                 )
                 heroi["ataque_base"] += 3
-                print(f"Ataque Base +3! Ataque atual: {heroi['ataque_base']}")
+                heroi["defesa"] += 3
+                heroi["cabeca"] += 1
+                heroi["pescoco"] += 2
+                heroi["torso"] += 1
+                heroi["bracos"] += 2
+                heroi["dedos"] += 1
+                heroi["pernas"] += 1
+                heroi["pes"] += 2
+                print("Você recebeu as seguintes melhorias:")
+                print(f"Atq: {heroi['ataque_base']}")
+                print(f"Def: {heroi['defesa']}")
+                print(f"Eq. utilizado na cabeça: {heroi['cabeca']}")
+                print(f"Eq. utilizado no pescoço: {heroi['pescoco']}")
+                print(f"Eq. no torso: {heroi['torso']}")
+                print(f"Eq. nos braços: {heroi['bracos']}")
+                print(f"Eq. nos dedos: {heroi['dedos']}")
+                print(f"Eq. nas pernas: {heroi['pernas']}")
+                print(f"Eq. nos pés: {heroi['pes']}")
+
                 utils.pausar()
 
-            # 2. Tesouro Comum (3-20)
-            elif evento_roll <= 20:
+            elif evento_roll_dice <= 20:
                 print(
                     "💰 Você encontra um item valioso que aumenta temporariamente a sua Defesa."
                 )
@@ -287,16 +374,14 @@ def explorar_floresta(hero, iniciar_batalha):
                 print(f"Defesa +1! Defesa atual: {heroi['defesa']}")
                 utils.pausar()
 
-            # 3. Caminho Livre (21-35)
-            elif evento_roll <= 35:
+            elif evento_roll_dice <= 59:
                 print(
                     "🍃 O caminho está silencioso. Parece que você escapou de um encontro desta vez."
                 )
                 utils.pausar()
 
-            # 4. Encontro com Monstro (36-50)
             else:
-                if evento_roll <= 50:
+                if evento_roll_dice <= 100:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
                     estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
@@ -351,15 +436,15 @@ def explorar_caverna(hero, iniciar_batalha):
         acao = input("Escolha a sua ação: ")
 
         if acao == "1":
-            evento_roll = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
 
-            print(f"\n* O Herói avança... (Roll: {evento_roll}) *")
+            print(f"\n* O Herói avança... (Roll: {evento_roll_dice}) *")
             time.sleep(1)
 
             # --- LÓGICA DE EVENTOS BASEADA NO ROLL ---
 
             # 1. Tesouro Raro (0-2)
-            if evento_roll <= 2:
+            if evento_roll_dice <= 2:
                 print(
                     "💎 VOCÊ ENCONTROU UM TESOURO RARO! O seu ataque base aumenta permanentemente!"
                 )
@@ -368,7 +453,7 @@ def explorar_caverna(hero, iniciar_batalha):
                 utils.pausar()
 
             # 2. Tesouro Comum (3-20)
-            elif evento_roll <= 20:
+            elif evento_roll_dice <= 20:
                 print(
                     "💰 Você encontra um item valioso que aumenta temporariamente a sua Defesa."
                 )
@@ -377,7 +462,7 @@ def explorar_caverna(hero, iniciar_batalha):
                 utils.pausar()
 
             # 3. Caminho Livre (21-35)
-            elif evento_roll <= 35:
+            elif evento_roll_dice <= 35:
                 print(
                     "🍃 O caminho está silencioso. Parece que você escapou de um encontro desta vez."
                 )
@@ -385,7 +470,7 @@ def explorar_caverna(hero, iniciar_batalha):
 
             # 4. Encontro com Monstro (36-50)
             else:
-                if evento_roll <= 50:
+                if evento_roll_dice <= 50:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
                     estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
@@ -440,18 +525,21 @@ def explorar_vila(hero, iniciar_batalha):
 
         acao = input("Escolha a sua ação: ")
 
-        if (
-            acao == "1"
-        ):  # Escolheu AVANÇAR - tem a probabilidade de encontrar qualquer coisa aqui
-            evento_roll = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+        if acao == "1":  # Escolheu AVANÇAR - Pode encontrar qualquer coisa aqui
+            # VAMOS JOGAS OS DADOS PARA ESTABELECER A PROBABILIDADE
+            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
 
-            print(f"\n* O Herói avança... (Roll: {evento_roll}) *")
+            print(f"\n* O Herói bravamente avança... (Roll: {evento_roll_dice}) *")
             time.sleep(1)
 
-            # --- LÓGICA DE EVENTOS BASEADA NO ROLL ---
+            # --- LÓGICA DE EVENTOS BASEADA NOS DADOS ---
+            # 0-2 - Tesouro raro
+            # 3-20 - Tesouro comum
+            # 21-35 - Caminho livre
+            # 36-50 - Encontro com monstro
+            # 51-100 - Encontro com monstro interativo ?
 
-            # 1. Tesouro Raro (0-2)
-            if evento_roll <= 2:
+            if evento_roll_dice <= 2:
                 print(
                     "💎 VOCÊ ENCONTROU UM TESOURO RARO! O seu ataque base aumenta permanentemente!"
                 )
@@ -459,8 +547,7 @@ def explorar_vila(hero, iniciar_batalha):
                 print(f"Ataque Base +3! Ataque atual: {heroi['ataque_base']}")
                 utils.pausar()
 
-            # 2. Tesouro Comum (3-20)
-            elif evento_roll <= 20:
+            elif evento_roll_dice <= 20:
                 print(
                     "💰 Você encontra um item valioso que aumenta temporariamente a sua Defesa."
                 )
@@ -468,22 +555,20 @@ def explorar_vila(hero, iniciar_batalha):
                 print(f"Defesa +1! Defesa atual: {heroi['defesa']}")
                 utils.pausar()
 
-            # 3. Caminho Livre (21-35)
-            elif evento_roll <= 35:
+            elif evento_roll_dice <= 35:
                 print(
                     "🍃 O caminho está silencioso. Parece que você escapou de um encontro desta vez."
                 )
                 utils.pausar()
 
-            # 4. Encontro com Monstro (36-50)
             else:
-                if evento_roll <= 50:
+                if evento_roll_dice <= 50:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
                     estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
                     )
 
-                    if estado == "CONTINUAR":
+                    if estado == "CONTINUAR":  # Volta para o menu exploração
                         continue  # Volta para o menu exploração
 
                     elif estado == "BATALHA_SUBITA":
@@ -512,16 +597,16 @@ def explorar_vila(hero, iniciar_batalha):
                     if not batalha_vencida:
                         return "DERROTA"  # Game Over
         elif acao == "2":
-            evento_roll = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
             print(
-                f"\n* Você decidiu explorar a área e procurar por tesouros... (Roll: {evento_roll}) *"
+                f"\n* Você decidiu explorar a área e procurar por tesouros... (Roll: {evento_roll_dice}) *"
             )
             time.sleep(3)
 
             # --- LÓGICA DE EVENTOS BASEADA NO ROLL ---
 
             # 1. Tesouro Raro (Chances de 0-2)
-            if evento_roll <= 2:
+            if evento_roll_dice <= 2:
                 print(
                     "🎁 VOCÊ ENCONTROU UM TESOURO LENDÁRIO! O seu ataque aumenta drasticamente!"
                 )
@@ -530,7 +615,7 @@ def explorar_vila(hero, iniciar_batalha):
                 utils.pausar()
 
             # 2. Tesouro Comum (Chances de 3-35)
-            elif evento_roll <= 35:
+            elif evento_roll_dice <= 35:
                 print(
                     "✨ Você encontrou um item!!! Sua DEFESA aumenta temporariamente."
                 )
@@ -539,7 +624,7 @@ def explorar_vila(hero, iniciar_batalha):
                 utils.pausar()
 
             # 3. Não encontrou nada (Chances de 36-100)
-            elif evento_roll <= 35:
+            elif evento_roll_dice <= 35:
                 print("Não encontrou nada aqui. Parece que área já foi explorada.")
                 utils.pausar()
 
@@ -553,7 +638,7 @@ def explorar_vila(hero, iniciar_batalha):
 def evento_encontro_monstro():
     # Lógica para encontrar um monstro aleatório e iniciar batalha
 
-    inimigo_data = obter_inimigo_aleatorio(nivel=nivel_inimigo)
+    inimigo_data = obter_inimigo_aleatorio(nivel)
     utils.limpar_tela()
     print("-" * 60)
     print("\n--- ENCONTRO COM MONSTRO ---")
@@ -644,7 +729,7 @@ def evento_encontro_monstro():
         return "CONTINUAR", None, None
 
 
-def introducao():
+def abertura_jogo():
     # Apresenta a introdução do jogo.
     utils.limpar_tela()
     print("-" * 60)
@@ -703,7 +788,7 @@ def escolher_caminho():
 # --- FUNÇÃO MAIN ---
 def main():
 
-    introducao()
+    abertura_jogo()
 
     # Preparação do herói - Iniciando o jogo
 
