@@ -122,8 +122,12 @@ def calcular_defesa(heroi):
 
 # ---INICIAR BATALHAS ---
 def iniciar_batalha(inimigo_data, heroi, primeiro_turno="HEROI", modo_batalha="NORMAL"):
+    # Lógica de combate com turnos estratégicos.
+    #:param inimigo_data: Dicionário do inimigo atual.
+    #:param primeiro_turno: 'HEROI' ou 'MONSTRO' (Quem tem a iniciativa).
+    #:param modo_batalha: 'NORMAL' ou 'EXTRA' (Para ataques surpresa).
 
-    inimigo_atual = inimigo_data.copy()  # Pega o dicionário de inimigos
+    inimigo_atual = inimigo_data.copy()
 
     print(
         f"\n !!! ENCONTRO: {inimigo_atual['tipo']} {inimigo_atual['nome']} (HP: {inimigo_atual['hp']}) !!! "
@@ -132,7 +136,7 @@ def iniciar_batalha(inimigo_data, heroi, primeiro_turno="HEROI", modo_batalha="N
 
     # --- 1. LÓGICA DE ATAQUE SURPRESA/EXTRA (Pré-Batalha) ---
 
-    if modo_batalha == "DESPREVINIDO" and primeiro_turno == "MONSTRO":  # Se o modo for
+    if modo_batalha == "BATALHA_SUBITA" and primeiro_turno == "MONSTRO":
         dano_extra = inimigo_atual["ataque"] + utils.jogar_dado(
             utils.DADO_INIMIGO_ATAQUE
         )
@@ -294,7 +298,7 @@ def evento_econtrar_bau(heroi, iniciar_batalha):
                     f"O BAÚ TINHA UMA ARMADILHA!!! O monstro {inimigo_surpresa['nome']} salta do baú e te ataca de surpresa! Prepare-se para a batalha!"
                 )
                 utils.pausar()
-                return "DESPREVINIDO", inimigo_surpresa, "MONSTRO"
+                return "BATALHA_SUBITA", inimigo_surpresa, "MONSTRO"
 
             # 3.2. ARMADILHA: VENENO (41-80%)
             elif bau_roll <= 80:
@@ -322,7 +326,7 @@ def evento_econtrar_bau(heroi, iniciar_batalha):
 
 
 # --- FUNÇÃO DE EXPLORAÇÃO DA FLORESTA SOMBRIA ---
-def explorar_floresta(heroi, iniciar_batalha):
+def explorar_floresta(hero, iniciar_batalha):
     # Lógica de exploração com eventos baseados em probabilidade (d100).
     utils.limpar_tela()
     print("🌳 Você está explorando a Floresta Sombria.")
@@ -337,9 +341,7 @@ def explorar_floresta(heroi, iniciar_batalha):
 
         acao = input("Escolha o que vai fazer: ")
 
-        # ESCOLHEU AVANÇAR
         if acao == "1":
-            # Joga o dado
             evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
 
             print(
@@ -349,53 +351,7 @@ def explorar_floresta(heroi, iniciar_batalha):
 
             # --- LÓGICA DE EVENTOS BASEADA ROLL DICE ---
 
-            if evento_roll_dice <= 100:
-                # Estava avançando e encontrou um bau
-                estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
-                    heroi, iniciar_batalha
-                )
-
-                if estado == "CONTINUAR":
-                    continue  # Volta para o menu exploração
-
-                elif estado == "BATALHA_SUBITA":
-                    # Bau com mmonstro surpresa
-                    batalha_vencida = iniciar_batalha(
-                        inimigo_encontrado, primeiro_turno
-                    )
-
-                    if not batalha_vencida:
-                        return "DERROTA"  # Game Over
-
-                else:
-                    nivel_inimigo = max(1, heroi["nivel"])
-                    resultado, inimigo_encontrado, primeiro_turno = (
-                        evento_encontro_monstro(nivel_inimigo)
-                    )
-
-                    if resultado == "CONTINUAR":
-                        continue  # Volta para o menu exploração
-
-        elif resultado in ["BATALHA_NORMAL", "BATALHA_EXTRA"]:
-            batalha_vencida = iniciar_batalha(
-                inimigo_encontrado, primeiro_turno, modo_batalha=resultado
-            )
-            if not batalha_vencida:
-                return "DERROTA"  # Game Over
-
-        # ESCOLHEU EXPLORAR
-        elif acao == "2":
-            # Joga o dado
-            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
-
-            print(
-                f"\n* O Herói avança e continua dentro da FLORESTA SOMBRIA... (Roll: {evento_roll_dice}) *"
-            )
-            time.sleep(1)
-
-            # --- LÓGICA DE EVENTOS BASEADA ROLL DICE ---
-
-            if evento_roll_dice <= 1:  # se o dado
+            if evento_roll_dice <= 1:
                 print(
                     "💎 VOCÊ ENCONTROU UM TESOURO RARO! Você ganhou várias melhorias nos teus atributos!"
                 )
@@ -438,7 +394,7 @@ def explorar_floresta(heroi, iniciar_batalha):
             else:
                 if evento_roll_dice <= 100:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
-                    estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
+                    estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
                     )
 
@@ -474,14 +430,9 @@ def explorar_floresta(heroi, iniciar_batalha):
         elif acao == "0":
             return "PRINCIPAL"
 
-        else:
-            print("Ação inválida. Por favor, escolha 1, 2 ou 0.")
-            utils.pausar()
-            continue
-
 
 # --- FUNÇÃO DE EXPLORAÇÃO CAVERNA DA MONTANHA GELADA ---
-def explorar_caverna(heroi, iniciar_batalha):
+def explorar_caverna(hero, iniciar_batalha):
     # Lógica de exploração com eventos baseados em probabilidade (d100).
     utils.limpar_tela()
     print("🌳 Você está explorando a Caverna da Montanha Gelada.")
@@ -532,7 +483,7 @@ def explorar_caverna(heroi, iniciar_batalha):
             else:
                 if evento_roll_dice <= 50:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
-                    estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
+                    estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
                     )
 
@@ -570,7 +521,7 @@ def explorar_caverna(heroi, iniciar_batalha):
 
 
 # --- FUNÇÃO DE EXPLORAÇÃO DA VILA ABANDONADA ---
-def explorar_vila(heroi, iniciar_batalha):
+def explorar_vila(hero, iniciar_batalha):
     # Lógica de exploração com eventos baseados em probabilidade (d100).
     utils.limpar_tela()
     print("🌳 Você está explorando a Floresta Sombria.")
@@ -624,7 +575,7 @@ def explorar_vila(heroi, iniciar_batalha):
             else:
                 if evento_roll_dice <= 50:
                     # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
-                    estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
+                    estado, inimigo_encontrado, primeiro_turno = evento_bau_tesouro(
                         heroi, iniciar_batalha
                     )
 
