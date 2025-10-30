@@ -227,7 +227,7 @@ def obter_inimigo_aleatorio(nivel):
         )
         # Retornamos um inimigo de nível 1 como padrão
         inimigos_filtrados = [monstro for monstro in INIMIGOS if monstro["nivel"] == 1]
-        return random.choice(inimigos_filtrados_padrao)
+        return random.choice(inimigos_filtrados)
 
 
 # --- FIM DA BASE DE DADOS DE INIMIGOS ---

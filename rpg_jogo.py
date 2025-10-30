@@ -64,7 +64,7 @@ def aplicar_melhoria_aleatoria(heroi):
         "cabeca",
         "pescoco",
         "torso",
-        "braços",
+        "bracos",
         "dedos",
         "pernas",
         "pes",
@@ -104,6 +104,22 @@ def calcular_ataque(heroi):
     return ataque_total
 
 
+def calcular_ataque(inimigo):
+    # Calcula o ataque base total do herói, incluindo bônus de equipamento.
+    ataque_total = (
+        heroi["ataque_base"]
+        + heroi["cabeca"]
+        + heroi["pescoco"]
+        + heroi["torso"]
+        + heroi["braços"]
+        + heroi["dedos"]
+        + heroi["pernas"]
+        + heroi["pes"]
+    )
+    print(f"Ataque total do herói: {ataque_total}")
+    return ataque_total
+
+
 def calcular_defesa(heroi):
     # Calcula o ataque base total do herói, incluindo bônus de equipamento.
     defesa_total = (
@@ -116,7 +132,7 @@ def calcular_defesa(heroi):
         + heroi["pernas"]
         + heroi["pes"]
     )
-    print(f"Ataque total do herói: {defesa_total}")
+    print(f"Defesa do herói: {defesa_total}")
     return defesa_total
 
 
@@ -132,24 +148,28 @@ def iniciar_batalha(inimigo_data, heroi, primeiro_turno="HEROI", modo_batalha="N
 
     # --- 1. LÓGICA DE ATAQUE SURPRESA/EXTRA (Pré-Batalha) ---
 
-    if modo_batalha == "DESPREVINIDO" and primeiro_turno == "MONSTRO":  # Se o modo for
-        dano_extra = inimigo_atual["ataque"] + utils.jogar_dado(
-            utils.DADO_INIMIGO_ATAQUE
-        )
-        heroi["hp"] -= dano_extra
+    if (
+        modo_batalha == "DESPREVINIDO" and primeiro_turno == "MONSTRO"
+    ):  # Se o modo for desprevinido e o primeiro turno for do monstro
+        dano_extra = calcular_ataque(
+            heroi
+        )  # Dano extra recebe o valor do ataque calculado na função calcular_ataque
+        heroi["hp"] -= dano_extra  # HP do heroi é subtraido pelo valor em dano_extra
         print(
             f"\n!!! ATAQUE SURPRESA DO {inimigo_atual['nome']} !!! Causa {dano_extra} de dano extra!."
-        )
+        )  # Imprime na tela o nome do inimigo e o valor do dano causado
 
-        if heroi["hp"] <= 0:
+        if heroi["hp"] <= 0:  # Verifica se o HP do heroi é menor ou igual a zero
             print(
                 "\n !!! O ATAQUE SURPRESA FOI FATAL !!! VOCÊ FOI DERROTADO !!! FIM DE JOGO..."
-            )
-            utils.pausar()
-            return False  # Morreu no ataque surpresa
+            )  # Se for ele imprime a mensagem...
+            utils.pausar()  # Pausa
+            return False  # aqui ele retorna False pois o HP é menor ou igual a zero
 
         # Sobreviveu ao ataque surpresa
-        print(f"{heroi['nome']} HP após ataque surpresa: {max(0, heroi['hp'])}")
+        print(
+            f"{heroi['nome']} sobreviveu ao ataque surpresa! HP atual: {heroi['hp']} - Prepare-se para a batalha!"
+        )
         utils.pausar()
 
     # 2. Define a ordem inicial do loop de turnos
@@ -199,10 +219,12 @@ def iniciar_batalha(inimigo_data, heroi, primeiro_turno="HEROI", modo_batalha="N
             # 2. Ataque do Monstro (Inimigo)
             # Se o monstro ataca primeiro (primeiro_turno == 'MONSTRO')
             # Lógica de ataque do inimigo (mantida)
+
+            defesa_atual = calcular_defesa(heroi)
             dano_bruto_inimigo = inimigo_atual["ataque"] + utils.jogar_dado(
                 utils.DADO_INIMIGO_ATAQUE
             )
-            dano_final_inimigo = max(0, dano_bruto_inimigo - heroi["defesa"])
+            dano_final_inimigo = max(0, dano_bruto_inimigo - defesa_atual)
             heroi["hp"] -= dano_final_inimigo
             print(
                 f"\n{inimigo_atual['nome']} ataca! Causa {dano_final_inimigo} de dano. {heroi['nome']} HP: {max(0, heroi['hp'])}"
@@ -323,161 +345,56 @@ def evento_econtrar_bau(heroi, iniciar_batalha):
 
 # --- FUNÇÃO DE EXPLORAÇÃO DA FLORESTA SOMBRIA ---
 def explorar_floresta(heroi, iniciar_batalha):
-    # Lógica de exploração com eventos baseados em probabilidade (d100).
+
     utils.limpar_tela()
+
     print("🌳 Você está explorando a Floresta Sombria.")
 
-    resultado = None
+    evento_jogar_dado = utils.jogar_dado(100)
 
-    while True:
-        print("\n--- AÇÕES NA FLORESTA SOMBRIA ---")
-        print("1. Avançar e continuar a jornada")
-        print("2. Explorar a procura de tesouros")
-        print("0. Voltar para a Encruzilhada Principal")
+    if evento_jogar_dado <= 50:
+        print(
+            f"\n* 🍃 O caminho está silencioso. O Herói avança... (Roll: {evento_jogar_dado}) *"
+        )
+        utils.pausar()
+        return "CONTINUAR"
 
-        acao = input("Escolha o que vai fazer: ")
+    elif evento_jogar_dado <= 85:
+        print(
+            f"O herói encontrou um monstro pela frente. Prepare-se para a batalha! (Roll: {evento_jogar_dado})"
+        )
+        resultado, inimigo_encontrado, primeiro_turno = evento_encontro_monstro(
+            heroi, iniciar_batalha
+        )
 
-        # ESCOLHEU AVANÇAR
-        if acao == "1":
-            # Joga o dado
-            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+        if resultado == "CONTINUAR":
+            return "CONTINUAR"
 
-            print(
-                f"\n* O Herói avança e continua dentro da FLORESTA SOMBRIA... (Roll: {evento_roll_dice}) *"
-            )
-            time.sleep(1)
+        elif resultado == "DERROTA":
+            return "DERROTA"
 
-            # --- LÓGICA DE EVENTOS BASEADA ROLL DICE ---
+        elif resultado in ["BATALHA_NORMAL", "BATALHA_EXTRA", "BATALHA_SUBITA"]:
+            batalha_vencida = iniciar_batalha(inimigo_encontrado, primeiro_turno)
+            return "CONTINUAR" if batalha_vencida else "DERROTA"
 
-            if evento_roll_dice <= 100:
-                # Estava avançando e encontrou um bau
-                estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
-                    heroi, iniciar_batalha
-                )
+    else:
+        print(
+            f"Você encontrou um baú. Prepare-se para abrir! (Roll: {evento_jogar_dado})"
+        )
+        resultado_bau, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
+            heroi, iniciar_batalha
+        )
 
-                if estado == "CONTINUAR":
-                    continue  # Volta para o menu exploração
+        if resultado_bau == "CONTINUAR":
+            return "CONTINUAR"
 
-                elif estado == "BATALHA_SUBITA":
-                    # Bau com mmonstro surpresa
-                    batalha_vencida = iniciar_batalha(
-                        inimigo_encontrado, primeiro_turno
-                    )
+        elif resultado_bau == "DERROTA":
+            return "DERROTA"
+        elif resultado_bau in ["BATALHA_SUBITA"]:
+            batalha_vencida = iniciar_batalha(inimigo_encontrado, primeiro_turno)
+            return "CONTINUAR" if batalha_vencida else "DERROTA"
 
-                    if not batalha_vencida:
-                        return "DERROTA"  # Game Over
-
-                else:
-                    nivel_inimigo = max(1, heroi["nivel"])
-                    resultado, inimigo_encontrado, primeiro_turno = (
-                        evento_encontro_monstro(nivel_inimigo)
-                    )
-
-                    if resultado == "CONTINUAR":
-                        continue  # Volta para o menu exploração
-
-        elif resultado in ["BATALHA_NORMAL", "BATALHA_EXTRA"]:
-            batalha_vencida = iniciar_batalha(
-                inimigo_encontrado, primeiro_turno, modo_batalha=resultado
-            )
-            if not batalha_vencida:
-                return "DERROTA"  # Game Over
-
-        # ESCOLHEU EXPLORAR
-        elif acao == "2":
-            # Joga o dado
-            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
-
-            print(
-                f"\n* O Herói avança e continua dentro da FLORESTA SOMBRIA... (Roll: {evento_roll_dice}) *"
-            )
-            time.sleep(1)
-
-            # --- LÓGICA DE EVENTOS BASEADA ROLL DICE ---
-
-            if evento_roll_dice <= 1:  # se o dado
-                print(
-                    "💎 VOCÊ ENCONTROU UM TESOURO RARO! Você ganhou várias melhorias nos teus atributos!"
-                )
-                heroi["ataque_base"] += 3
-                heroi["defesa"] += 3
-                heroi["cabeca"] += 1
-                heroi["pescoco"] += 2
-                heroi["torso"] += 1
-                heroi["bracos"] += 2
-                heroi["dedos"] += 1
-                heroi["pernas"] += 1
-                heroi["pes"] += 2
-                print("Você recebeu as seguintes melhorias:")
-                print(f"Atq: {heroi['ataque_base']}")
-                print(f"Def: {heroi['defesa']}")
-                print(f"Eq. utilizado na cabeça: {heroi['cabeca']}")
-                print(f"Eq. utilizado no pescoço: {heroi['pescoco']}")
-                print(f"Eq. no torso: {heroi['torso']}")
-                print(f"Eq. nos braços: {heroi['bracos']}")
-                print(f"Eq. nos dedos: {heroi['dedos']}")
-                print(f"Eq. nas pernas: {heroi['pernas']}")
-                print(f"Eq. nos pés: {heroi['pes']}")
-
-                utils.pausar()
-
-            elif evento_roll_dice <= 20:
-                print(
-                    "💰 Você encontra um item valioso que aumenta temporariamente a sua Defesa."
-                )
-                heroi["defesa"] += 1
-                print(f"Defesa +1! Defesa atual: {heroi['defesa']}")
-                utils.pausar()
-
-            elif evento_roll_dice <= 59:
-                print(
-                    "🍃 O caminho está silencioso. Parece que você escapou de um encontro desta vez."
-                )
-                utils.pausar()
-
-            else:
-                if evento_roll_dice <= 100:
-                    # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
-                    estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
-                        heroi, iniciar_batalha
-                    )
-
-                    if estado == "CONTINUAR":
-                        continue  # Volta para o menu exploração
-
-                    elif estado == "BATALHA_SUBITA":
-                        # Bau com mmonstro surpresa
-                        batalha_vencida = iniciar_batalha(
-                            inimigo_encontrado, primeiro_turno
-                        )
-
-                        if not batalha_vencida:
-                            return "DERROTA"  # Game Over
-
-                    # 51-100: Encontro com Monstro Interativo
-                    else:
-                        nivel_inimigo = max(1, heroi["nivel"])
-                        resultado, inimigo_encontrado, primeiro_turno = (
-                            evento_encontro_monstro(nivel_inimigo)
-                        )
-
-                        if resultado == "CONTINUAR":
-                            continue  # Volta para o menu exploração
-
-                elif resultado in ["BATALHA_NORMAL", "BATALHA_EXTRA"]:
-                    batalha_vencida = iniciar_batalha(
-                        inimigo_encontrado, primeiro_turno, modo_batalha=resultado
-                    )
-                    if not batalha_vencida:
-                        return "DERROTA"  # Game Over
-
-        elif acao == "0":
-            return "PRINCIPAL"
-
-        else:
-            print("Ação inválida. Por favor, escolha 1, 2 ou 0.")
-            utils.pausar()
-            continue
+    return "CONTINUAR"
 
 
 # --- FUNÇÃO DE EXPLORAÇÃO CAVERNA DA MONTANHA GELADA ---
@@ -570,8 +487,9 @@ def explorar_caverna(heroi, iniciar_batalha):
 
 
 # --- FUNÇÃO DE EXPLORAÇÃO DA VILA ABANDONADA ---
-def explorar_vila(heroi, iniciar_batalha):
-    # Lógica de exploração com eventos baseados em probabilidade (d100).
+def explorar_vila(
+    heroi, iniciar_batalha
+):  # Lógica de exploração com eventos baseados em probabilidade (d100).
     utils.limpar_tela()
     print("🌳 Você está explorando a Floresta Sombria.")
 
@@ -579,126 +497,55 @@ def explorar_vila(heroi, iniciar_batalha):
 
     while True:
         print("\n--- AÇÕES NA VILA ABANDONADA ---")
-        print("1. Avançar")
-        print("2. Explorar o ambiente a procura de tesouros")
+        print(
+            "1. Avançar pelo caminho e continuar a jornada (Avança na jornada. Pode encontrar monstros e baús pelo caminho.)"
+        )
+        print(
+            "2. Explorar o ambiente e procurar tesouros escondidos. (Não avança na jornada. Pode encontrar monstros e baús.)"
+        )
         print("0. Voltar para a Encruzilhada Principal")
 
         acao = input("Escolha a sua ação: ")
 
         if acao == "1":  # Escolheu AVANÇAR - Pode encontrar qualquer coisa aqui
             # VAMOS JOGAS OS DADOS PARA ESTABELECER A PROBABILIDADE
-            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
+            avanca_roll = utils.jogar_dado(100)
 
             print(f"\n* O Herói bravamente avança... (Roll: {evento_roll_dice}) *")
             time.sleep(1)
 
-            # --- LÓGICA DE EVENTOS BASEADA NOS DADOS ---
-            # 0-2 - Tesouro raro
-            # 3-20 - Tesouro comum
-            # 21-35 - Caminho livre
-            # 36-50 - Encontro com monstro
-            # 51-100 - Encontro com monstro interativo ?
+            # --- LÓGICA DE AVANÇAR ---
+            # 1 - Pode encontrsar Bau
+            # 1.1 - Abre
+            # 1.1.1 - Tesouro Raro
+            # 1.1.2 - Tesouro Bom
+            # 1.1.3 - Tesouro Comum
+            # 1.2 - Não abre
+            # 2 - Encontro com monstro
+            # 3 - Caminho livre
 
-            if evento_roll_dice <= 2:
-                print(
-                    "💎 VOCÊ ENCONTROU UM TESOURO RARO! O seu ataque base aumenta permanentemente!"
-                )
-                heroi["ataque_base"] += 3
-                print(f"Ataque Base +3! Ataque atual: {heroi['ataque_base']}")
-                utils.pausar()
-
-            elif evento_roll_dice <= 20:
-                print(
-                    "💰 Você encontra um item valioso que aumenta temporariamente a sua Defesa."
-                )
-                heroi["defesa"] += 1
-                print(f"Defesa +1! Defesa atual: {heroi['defesa']}")
-                utils.pausar()
-
-            elif evento_roll_dice <= 35:
+            if avanca_roll <= 50:
                 print(
                     "🍃 O caminho está silencioso. Parece que você escapou de um encontro desta vez."
                 )
                 utils.pausar()
+                passos_jornada -= 1
+                return passos_jornada
 
-            else:
-                if evento_roll_dice <= 50:
-                    # Chama o Baú, que retorna 3 possíveis resultados (estado, inimigo, iniciativa)
-                    estado, inimigo_encontrado, primeiro_turno = evento_econtrar_bau(
-                        heroi, iniciar_batalha
-                    )
-
-                    if estado == "CONTINUAR":  # Volta para o menu exploração
-                        continue  # Volta para o menu exploração
-
-                    elif estado == "BATALHA_SUBITA":
-                        # Bau com mmonstro surpresa
-                        batalha_vencida = iniciar_batalha(
-                            inimigo_encontrado, primeiro_turno
-                        )
-
-                        if not batalha_vencida:
-                            return "DERROTA"  # Game Over
-
-                    # 51-100: Encontro com Monstro Interativo
-                    else:
-                        nivel_inimigo = max(1, heroi["nivel"])
-                        resultado, inimigo_encontrado, primeiro_turno = (
-                            evento_encontro_monstro(nivel_inimigo)
-                        )
-
-                        if resultado == "CONTINUAR":
-                            continue  # Volta para o menu exploração
-
-                elif resultado in ["BATALHA_NORMAL", "BATALHA_EXTRA"]:
-                    batalha_vencida = iniciar_batalha(
-                        inimigo_encontrado, primeiro_turno, modo_batalha=resultado
-                    )
-                    if not batalha_vencida:
-                        return "DERROTA"  # Game Over
-        elif acao == "2":
-            evento_roll_dice = utils.jogar_dado(utils.DADO_PROBABILIDADE)
-            print(
-                f"\n* Você decidiu explorar a área e procurar por tesouros... (Roll: {evento_roll_dice}) *"
-            )
-            time.sleep(3)
-
-            # --- LÓGICA DE EVENTOS BASEADA NO ROLL ---
-
-            # 1. Tesouro Raro (Chances de 0-2)
-            if evento_roll_dice <= 2:
-                print(
-                    "🎁 VOCÊ ENCONTROU UM TESOURO LENDÁRIO! O seu ataque aumenta drasticamente!"
-                )
-                heroi["ataque_base"] += 3
-                print(f"🗡️ Ataque +3! Ataque atual: {heroi['ataque_base']}")
-                utils.pausar()
-
-            # 2. Tesouro Comum (Chances de 3-35)
-            elif evento_roll_dice <= 35:
-                print(
-                    "✨ Você encontrou um item!!! Sua DEFESA aumenta temporariamente."
-                )
-                heroi["defesa"] += 1
-                print(f"Defesa +1! Defesa atual: {heroi['defesa']}")
-                utils.pausar()
-
-            # 3. Não encontrou nada (Chances de 36-100)
-            elif evento_roll_dice <= 35:
-                print("Não encontrou nada aqui. Parece que área já foi explorada.")
-                utils.pausar()
-
-                resultado == "CONTINUAR"
-                continue  # Volta para o menu exploração
+            if avanca_roll <= 80:
+                resultado_avanca = evento_econtrar_bau(heroi, iniciar_batalha)
+                if resultado_avanca == "CONTINUAR":
+                    passos_jornada -= 1
+                    return passos_jornada
 
         elif acao == "0":
             return "PRINCIPAL"
 
 
-def evento_encontro_monstro():
+def evento_encontro_monstro(heroi, iniciar_batalha, nivel=1):
     # Lógica para encontrar um monstro aleatório e iniciar batalha
 
-    inimigo_data = obter_inimigo_aleatorio(nivel)
+    inimigo_data = inimigos.obter_inimigo_aleatorio(nivel=nivel)
     utils.limpar_tela()
     print("-" * 60)
     print("\n--- ENCONTRO COM MONSTRO ---")
@@ -792,17 +639,17 @@ def evento_encontro_monstro():
 def abertura_jogo():
     # Apresenta a introdução do jogo.
     utils.limpar_tela()
-    print("-" * 60)
-    print("Bem-vindo ao RPG Aventura!")
-    print("-" * 60)
+    print("+" * 80)
+    print("Bem-vindo ao melhor RPG Aventura já feito!")
+    print("+" * 80)
     time.sleep(1)
-    print("Você é um herói corajoso em uma missão para salvar o reino.")
+    print("=" * 80)
+    print("A JORNADA DO PROGRAMADOR PYTHON")
+    print("=" * 80)
     time.sleep(1)
-    print("=" * 60)
-    print("A jornada do programador Python começa agora...")
-    print("=" * 60)
-    time.sleep(3)
-    utils.limpar_tela()
+    print("O herói é um guerreiro corajoso em uma missão solitária e foda.")
+    print("-" * 80)
+    utils.pausar()
 
 
 # --- FUNÇÃO MOSTRAR STATUS ---
@@ -829,22 +676,6 @@ def mostrar_status():
     utils.pausar()
 
 
-# --- FUNÇÃO ESCOLHER CAMINHO ---
-def escolher_caminho():
-    # Apresenta o menu de caminhos e retorna a escolha.
-    utils.limpar_tela()
-    print("Você está numa encruzilhada. O que você fará?")
-    print("\nEscolha seu caminho:")
-    print("1. Seguir pela trilha da Floresta Sombria (Nível sugerido: 1)")
-    print("2. Se aventurar na caverna da Montanha Gelada (Nível sugerido: 2)")
-    print("3. Vascular a Vila Abandonada (Nível sugerido: 3)")
-    print("4. Ver Status")
-    print("0. Sair do Jogo")
-
-    escolha = input("Digite o número do caminho que deseja seguir (ou '0' para sair): ")
-    return escolha
-
-
 # --- FUNÇÃO MAIN ---
 def main():
 
@@ -854,74 +685,169 @@ def main():
 
     nome_jogador = input("Digite um nome para seu personagem: ")
     heroi["nome"] = nome_jogador
+    print(
+        f"\nOlá {nome_jogador}, sua jornada começa aqui!!! Seja forte e atencioso, boa sorte!!!"
+    )
+    print("\n")
     utils.pausar()
+    utils.limpar_tela()
 
-    estado_atual = "PRINCIPAL"  # Inicializa o motor de estados
+    # ESCOLHA DA DIFICULDADE
 
-    while (
-        heroi["hp"] > 0
-    ):  # Loop principal do jogo - vai executar o bloco enquanto o herói estiver vivo
+    global DIFICULDADE_ATUAL
 
-        resultado_floresta = None  # Inicializamos a variável
+    while True:
+        print("\nEscolha o Modo de Jogo:")
+        print("1. Fácil (Menos Monstros, Mais Tesouros)")
+        print("2. Normal (Equilibrado)")
+        print("3. Difícil (Mais Monstros Poderosos)")
+        modo_de_jogo_escolhido = input("Digite 1, 2 ou 3: ")
 
-        # --- ESTADO 1: MENU PRINCIPAL (Encruzilhada) ---
-        if estado_atual == "PRINCIPAL":
-            escolha = escolher_caminho()
+        if modo_de_jogo_escolhido == "1":
+            DIFICULDADE_ATUAL = "FACIL"
+            break
+        elif modo_de_jogo_escolhido == "2":
+            DIFICULDADE_ATUAL = "NORMAL"
+            break
+        elif modo_de_jogo_escolhido == "3":
+            DIFICULDADE_ATUAL = "DIFICIL"
+            break
+        else:
+            print("Opção inválida. Por favor, escolha 1, 2 ou 3.")
+            utils.pausar()
+            continue
 
-            if escolha == "1":
-                print("Você escolheu a trilha da Floresta Sombria!")
-                estado_atual = "FLORESTA"  # MUDANÇA DE ESTADO
-                time.sleep(1)
-            elif escolha == "2":
-                print("Você escolheu a caverna da Montanha Gelada!")
-                estado_atual = "CAVERNA"  # MUDANÇA DE ESTADO
-                time.sleep(1)
-            elif escolha == "3":
-                print("Você escolheu vasculhar a Vila Abandonada!")
-                estado_atual = "VILA"  # MUDANÇA DE ESTADO
-                time.sleep(1)
-            elif escolha == "4":
-                mostrar_status()
-            elif escolha == "0":
-                print("Saindo do jogo. Até a próxima aventura!")
-                break
-            else:
-                print("Escolha inválida. Por favor, selecione um caminho válido.")
-                time.sleep(1)
-                pass
+    print(f"Você escolhou o modo {DIFICULDADE_ATUAL}, boa sorte na sua jornada!!! ")
+    utils.pausar()
+    utils.limpar_tela()
 
-        # --- ESTADO 2: EXPLORAÇÃO DA FLORESTA SOMBRIA ---
-        elif estado_atual == "FLORESTA":
-            print("\nVocê chegou à FLORESTA SOMBRIA!")
+    # TENTANDO IMPLEMENTAR ALGO PARECIDO COMO SAIR DE UM PONTO INICIAL E VIAJANDO DE UM LOCAL PARA OUTRO
+    # Loop principal do jogo - vai executar o bloco enquanto o herói estiver vivo
+
+    while heroi["hp"] > 0:
+
+        # ----------------------------------------------------
+        # FASE 1: FLORESTA SOMBRIA
+        # ----------------------------------------------------
+
+        passos_restantes = utils.jogar_dado(20)
+        passos_total = passos_restantes
+
+        print("*" * 60)
+        print("INICIO DA JORNADA NA FLORESTA SOMBRIA")
+        print("*" * 60)
+        utils.pausar()
+
+        print(
+            f"🌳FLORESTA SOMBRIA! - {passos_restantes} passos chegar na CAVERNA DA MONTANHA GELADA"
+        )
+
+        while passos_restantes > 0 and heroi["hp"] > 0:
+            utils.limpar_tela()
+            print("=" * 60)
+            print(
+                f" Você está na FLORESTA SOMBRIA! - Passo {passos_total} de {passos_restantes + 1} até a CAVERNA DA MONTANHA GELADA!"
+            )
+            print("=" * 60)
+            utils.pausar()
             resultado_floresta = explorar_floresta(heroi, iniciar_batalha)
 
             if resultado_floresta == "DERROTA":
-                break
-            elif resultado_floresta == "PRINCIPAL":
-                estado_atual = "PRINCIPAL"  # Volta para o menu principal
+                return
 
-        # --- ESTADO 3: EXPLORAÇÃO DA CAVERNA DA MONTANHA GELADA ---
-        elif estado_atual == "CAVERNA":
-            print("\nVocê chegou à CAVERNA DA MONTANHA GELADA!")
+            passos_restantes -= 1
+
+        if heroi["hp"] <= 0:
+            print(
+                "PARABÉNS!!! Você conseguiu atravessar a FLORESTA SOMBRIA e chegou a CAVERNA DA MONSTANHA GELADA"
+            )
+            utils.pausar()
+            break
+
+    while heroi["hp"] > 0:
+
+        # ----------------------------------------------------
+        # FASE 2: CAVERNA DA MONTANHA GELADA
+        # ----------------------------------------------------
+
+        passos_restantes = utils.jogar_dado(20)
+        passos_total = passos_restantes
+
+        print("*" * 60)
+        print("INICIO DA JORNADA NA CAVERNA DA MONTANHA GELADA")
+        print("*" * 60)
+        utils.pausar()
+
+        print(
+            f"🌳 CAVERNA DA MONTANHA GELADA! - {passos_restantes} passos chegar na VILA ABANDONADA"
+        )
+
+        while passos_restantes > 0 and heroi["hp"] > 0:
+            utils.limpar_tela()
+            print("=" * 60)
+            print(
+                f" Você está na CAVERNA DA MONTANHA GELADA! - Passo {passos_total} de {passos_restantes + 1} até a VILA ABANDONADA!"
+            )
+            print("=" * 60)
+            utils.pausar()
             resultado_caverna = explorar_caverna(heroi, iniciar_batalha)
 
             if resultado_caverna == "DERROTA":
-                break
-            elif resultado_caverna == "PRINCIPAL":
-                estado_atual = "PRINCIPAL"  # Volta para o menu principal
+                return
 
-        # --- ESTADO 4: EXPLORAÇÃO DA VILA ABANDONADA ---
-        elif estado_atual == "VILA":
-            print("\nVocê chegou à CAVERNA DA MONTANHA GELADA!")
+            passos_restantes -= 1
+
+        if heroi["hp"] <= 0:
+            print(
+                "PARABÉNS!!! Você conseguiu atravessar a CAVERNA DA MONTANHA GELADA e chegou a VILA ABANDONADA!"
+            )
+            utils.pausar()
+            break
+
+    while heroi["hp"] > 0:
+
+        # ----------------------------------------------------
+        # FASE 3: VILA ABANDONADA
+        # ----------------------------------------------------
+
+        passos_restantes = utils.jogar_dado(20)
+        passos_total = passos_restantes
+
+        print("*" * 60)
+        print("INICIO DA JORNADA NA VILA ABANDONADA")
+        print("*" * 60)
+        utils.pausar()
+
+        print(
+            f"🌳VILA ABANDONADA! - {passos_restantes} passos chegar na VILA ABANDONADA"
+        )
+
+        while passos_restantes > 0 and heroi["hp"] > 0:
+            utils.limpar_tela()
+            print("=" * 60)
+            print(
+                f" Você está na VILA ABANDONADA! - Passo {passos_total} de {passos_restantes + 1}!"
+            )
+            print("=" * 60)
+            utils.pausar()
             resultado_vila = explorar_vila(heroi, iniciar_batalha)
 
             if resultado_vila == "DERROTA":
-                break
-            elif resultado_vila == "PRINCIPAL":
-                estado_atual = "PRINCIPAL"  # Volta para o menu principal
+                return
 
+            passos_restantes -= 1
+
+        if heroi["hp"] <= 0:
+            print("PARABÉNS!!! Você conseguiu atravessar a VILA ABANDONADA")
+            utils.pausar()
+            break
+
+    # --- FIM DO JOGO ---
     if heroi["hp"] <= 0:
-        print("\n Obrigado por jogar!!! ")
+        print("\n!!! GAME OVER !!! OBRIGADO POR JOGAR!")
+    else:
+        # Se o jogo não quebrou por derrota, fazemos o resto das fases aqui
+        pass
 
 
 if __name__ == "__main__":
