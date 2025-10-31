@@ -1,0 +1,31 @@
+nome,raca,classe,tipo,nivel,nivel_maximo,hp,hp_maximo,ataque,ataque_base,inteligencia,forca,destreza,defesa,defesa_base,eqt_cabeca,eqt_pescoco,eqt_torso,eqt_bracos,eqt_dedos,eqt_pernas,eqt_pes,xp_recompensa,fraquezas,resistencias,habilidades,local,status
+Goblin Ladrão,Goblin,Ladino,Humanoide,1,1,30,30,8,8,5,8,12,2,2,0,0,0,0,0,0,0,10,Nenhuma,Ferro,Atordoar,Floresta Sombria,Ativo
+Rato Gigante,Animal,Peste,Fera,1,1,20,20,10,10,2,6,15,0,0,0,0,0,0,0,0,0,7,Fogo,Veneno,Mordida,Floresta Sombria,Ativo
+Vespa Venenosa,Inseto,Atirador,Peste,1,1,25,25,12,12,3,4,18,0,0,0,0,0,0,0,0,0,8,Frio,Nenhuma,Veneno Lento,Floresta Sombria,Ativo
+Esqueleto,Morto-Vivo,Guerreiro,Maligno,1,1,35,35,7,7,4,10,5,3,3,0,0,0,0,0,0,0,15,Contusão,Perfuração,Reanimar,Floresta Sombria,Ativo
+Lobo Selvagem,Animal,Caçador,Fera,1,1,40,40,9,9,5,15,10,2,2,0,0,0,0,0,0,0,12,Nenhuma,Vento,Uivo,Floresta Sombria,Ativo
+Slime Verde,Elemental,Lentidão,Elemental,1,1,50,50,5,5,1,12,2,5,5,0,0,0,0,0,0,0,10,Fogo,Veneno,Cola,Floresta Sombria,Ativo
+Bandido Novato,Humanoide,Ladino,Humanoide,1,1,30,30,11,11,7,9,14,1,1,0,0,0,0,0,0,0,11,Nenhuma,Nenhuma,Roubar,Floresta Sombria,Ativo
+Morcego Vampiro,Animal,Peste,Fera,1,1,25,25,10,10,4,7,16,1,1,0,0,0,0,0,0,0,9,Luz,Trevas,Drenar Vida,Floresta Sombria,Ativo
+Cogumelo Tóxico,Planta,Mago,Mágico,1,1,30,30,6,6,8,4,5,2,2,0,0,0,0,0,0,0,8,Fogo,Terra,Esporos,Floresta Sombria,Ativo
+Fantasma,Morto-Vivo,Feiticeiro,Espiritual,1,1,45,45,15,15,10,3,12,0,0,0,0,0,0,0,0,0,16,Luz,Físico,Possuir,Floresta Sombria,Ativo
+Troll da Caverna,Gigante,Bruto,Monstro,2,3,60,60,15,15,5,20,5,8,8,0,0,0,0,0,0,0,30,Fogo,Gelo,Regenerar,Caverna Gelada,Ativo
+Guerreiro Orc,Orc,Guerreiro,Humanoide,2,3,55,55,18,18,6,15,10,6,6,0,0,0,0,0,0,0,25,Físico,Nenhuma,Grito de Guerra,Caverna Gelada,Ativo
+Aranha Gigante,Animal,Atirador,Fera,2,3,40,40,22,22,7,10,20,4,4,0,0,0,0,0,0,0,28,Fogo,Nenhuma,Teia,Caverna Gelada,Ativo
+Elemental de Gelo,Elemental,Mago,Mágico,2,3,70,70,14,14,15,12,8,10,10,0,0,0,0,0,0,0,35,Fogo,Gelo,Nevasca,Caverna Gelada,Ativo
+Grifo Jovem,Animal,Voador,Fera,2,3,45,45,20,20,8,18,15,5,5,0,0,0,0,0,0,0,32,Vento,Terra,Mergulho,Caverna Gelada,Ativo
+Cultista Sombrio,Humanoide,Feiticeiro,Mágico,2,3,50,50,16,16,16,8,12,7,7,0,0,0,0,0,0,0,27,Luz,Trevas,Maldição,Caverna Gelada,Ativo
+Escorpião Rei,Inseto,Tanque,Fera,2,3,75,75,12,12,4,22,6,12,12,0,0,0,0,0,0,0,38,Frio,Veneno,Ferrão,Caverna Gelada,Ativo
+Lobo do Gelo,Animal,Caçador,Fera,2,3,50,50,19,19,7,17,16,6,6,0,0,0,0,0,0,0,29,Fogo,Gelo,Patada,Caverna Gelada,Ativo
+Gólem de Pedra,Gólem,Tanque,Elemental,2,3,80,80,10,10,5,25,3,15,15,0,0,0,0,0,0,0,40,Água,Físico,Golpe Forte,Caverna Gelada,Ativo
+Sombra Veloz,Espiritual,Ladino,Espiritual,2,3,40,40,25,25,10,5,25,3,3,0,0,0,0,0,0,0,33,Luz,Físico,Invisibilidade,Caverna Gelada,Ativo
+Bruxa Corrompida,Humanoide,Mago,Mágico,3,5,65,65,30,30,22,10,15,10,10,0,0,0,0,0,0,0,65,Físico,Magia,Bola de Fogo,Vila Abandonada,Ativo
+Gárgula de Pedra,Elemental,Tanque,Monstro,3,5,90,90,25,25,10,30,12,20,20,0,0,0,0,0,0,0,75,Vento,Terra,Defesa Alada,Vila Abandonada,Ativo
+Lich,Morto-Vivo,Feiticeiro,Mágico,3,5,80,80,35,35,30,15,18,15,15,0,0,0,0,0,0,0,70,Luz,Frio,Evocação,Vila Abandonada,Ativo
+Guardião de Ferro,Gólem,Tanque,Elemento,3,5,120,120,20,20,5,40,10,25,25,0,0,0,0,0,0,0,80,Elétrico,Físico,Esmagamento,Vila Abandonada,Ativo
+Banshee,Espiritual,Suporte,Espiritual,3,5,50,50,40,40,15,5,30,5,5,0,0,0,0,0,0,0,90,Luz,Sônico,Grito de Dor,Vila Abandonada,Ativo
+Vampiro,Morto-Vivo,Ladino,Maligno,3,5,70,70,32,32,18,25,28,12,12,0,0,0,0,0,0,0,68,Fogo,Trevas,Transfigurar,Vila Abandonada,Ativo
+Anjo Caído,Espiritual,Guerreiro,Maligno,3,5,95,95,38,38,14,35,22,18,18,0,0,0,0,0,0,0,85,Trevas,Luz,Asa Cortante,Vila Abandonada,Ativo
+Golem de Madeira,Elemento,Tanque,Elemental,3,5,100,100,22,22,8,32,15,20,20,0,0,0,0,0,0,0,72,Fogo,Água,Enraizar,Vila Abandonada,Ativo
+Chefe Bandido,Humanoide,Guerreiro,Humanoide,3,5,85,85,34,34,12,28,25,15,15,0,0,0,0,0,0,0,60,Nenhuma,Nenhuma,Evasão,Vila Abandonada,Ativo
+Quimera,Fera,Múltiplo,Monstro,3,5,110,110,36,36,10,30,20,16,16,0,0,0,0,0,0,0,95,Gelo,Fogo,Sopro Triplo,Vila Abandonada,Ativo

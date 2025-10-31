@@ -88,6 +88,7 @@ def aplicar_melhoria_rara(heroi):
     print("O herói obteve melhorias raras!")
 
 
+# ---FUNÇÃO QUE CALCULA O ATAQUE TOTAL DO HEROI ---
 def calcular_ataque(heroi):
     # Calcula o ataque base total do herói, incluindo bônus de equipamento.
     ataque_total = (
@@ -104,22 +105,21 @@ def calcular_ataque(heroi):
     return ataque_total
 
 
+# ---FUNÇÃO QUE CALCULA O ATAQUE TOTAL DO INIMIGO ---
 def calcular_ataque(inimigo):
     # Calcula o ataque base total do herói, incluindo bônus de equipamento.
     ataque_total = (
-        heroi["ataque_base"]
-        + heroi["cabeca"]
-        + heroi["pescoco"]
-        + heroi["torso"]
-        + heroi["braços"]
-        + heroi["dedos"]
-        + heroi["pernas"]
-        + heroi["pes"]
+        inimigo["ataque"]
+        + inimigo["inteligencia"]
+        + inimigo["forca"]
+        + inimigo["destreza"]
     )
-    print(f"Ataque total do herói: {ataque_total}")
+
+    print(f"Ataque total do inimigo: {ataque_total}")
     return ataque_total
 
 
+# ---FUNÇÃO QUE CALCULA A DEFESA TOTAL DO HEROI ---
 def calcular_defesa(heroi):
     # Calcula o ataque base total do herói, incluindo bônus de equipamento.
     defesa_total = (
@@ -136,7 +136,7 @@ def calcular_defesa(heroi):
     return defesa_total
 
 
-# ---INICIAR BATALHAS ---
+# ---FUNÇÃO PARA INICIAR AS BATALHAS ---
 def iniciar_batalha(inimigo_data, heroi, primeiro_turno="HEROI", modo_batalha="NORMAL"):
 
     inimigo_atual = inimigo_data.copy()  # Pega o dicionário de inimigos
@@ -542,10 +542,11 @@ def explorar_vila(
             return "PRINCIPAL"
 
 
+# --- FUNÇÃO PARA ESCOLHER MONSTRO PARA CADA BATALHA ---
 def evento_encontro_monstro(heroi, iniciar_batalha, nivel=1):
-    # Lógica para encontrar um monstro aleatório e iniciar batalha
 
     inimigo_data = inimigos.obter_inimigo_aleatorio(nivel=nivel)
+
     utils.limpar_tela()
     print("-" * 60)
     print("\n--- ENCONTRO COM MONSTRO ---")
@@ -636,6 +637,7 @@ def evento_encontro_monstro(heroi, iniciar_batalha, nivel=1):
         return "CONTINUAR", None, None
 
 
+# --- FUNÇÃO COM SAUDAÇÃO DA ABERTURA DO JOGO ---
 def abertura_jogo():
     # Apresenta a introdução do jogo.
     utils.limpar_tela()
@@ -652,7 +654,7 @@ def abertura_jogo():
     utils.pausar()
 
 
-# --- FUNÇÃO MOSTRAR STATUS ---
+# --- FUNÇÃO PARA MOSTRAR O MOSTRAR STATUS DO HEROI ---
 def mostrar_status():
     # Apresenta o status atual e bónus de equipamento do herói.
     utils.limpar_tela()
@@ -676,7 +678,7 @@ def mostrar_status():
     utils.pausar()
 
 
-# --- FUNÇÃO MAIN ---
+# --- FUNÇÃO MAIN (PRINCIPAL) ---
 def main():
 
     abertura_jogo()

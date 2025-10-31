@@ -1,0 +1,21 @@
+tipo,classe,nivel,nome,peso,alcance,velocidade,critico_chance,critico_dano,slot,elemento,raridade,ataque_base,defesa_base,durabilidade,preco,status
+Espada,Guerreiro,1,Espada Envelhecida,3,1,10,5,150,arma,Ferro,COMUM,5,0,100,50,Ativo
+Machado,Guerreiro,2,Machado de Batalha,5,1,8,8,175,arma,Ferro,COMUM,8,1,120,75,Ativo
+Cajado,Mago,1,Cajado de Salgueiro,2,3,12,3,150,arma,Madeira,COMUM,4,2,80,40,Ativo
+Adaga,Ladino,1,Adaga Fina,1,1,15,15,200,arma,Ferro,COMUM,6,0,70,60,Ativo
+Arco,Arqueiro,3,Arco de Caça,4,5,10,10,150,arma,Madeira,RARO,10,1,150,120,Ativo
+Espada,Paladino,5,Lâmina do Sol,7,1,7,12,250,arma,Luz,RARO,15,5,200,300,Ativo
+Machado,Berserker,6,Machado Sangrento,8,1,5,20,200,arma,Trevas,RARO,20,2,180,350,Ativo
+Cajado,Feiticeiro,7,Cajado da Tempestade,3,4,11,8,175,arma,Vento,RARO,18,3,110,400,Ativo
+Adaga,Assassino,8,Presa Envenenada,1,1,20,30,300,arma,Veneno,LENDARIO,25,0,130,600,Ativo
+Arco,Caçador,9,Arco Élfico,5,7,14,18,250,arma,Natureza,LENDARIO,28,3,250,750,Ativo
+Espada,Guerreiro,10,Lâmina da Programação,10,1,10,25,350,arma,Mágica,LENDARIO,35,10,300,1200,Ativo
+Machado,Guerreiro,2,Machado Quebrado,5,1,7,4,140,arma,Ferro,COMUM,6,0,50,30,Quebrado
+Cajado,Mago,4,Cajado Brilhante,2,3,13,6,160,arma,Fogo,RARO,12,2,90,180,Ativo
+Adaga,Ladino,6,Adaga Veloz,1,1,18,25,220,arma,Vento,RARO,16,1,100,220,Ativo
+Arco,Arqueiro,1,Arco Curto,3,4,11,8,140,arma,Madeira,COMUM,4,0,60,25,Ativo
+Espada,Paladino,3,Espada Defensiva,6,1,8,5,150,arma,Terra,RARO,10,8,180,250,Ativo
+Machado,Berserker,4,Machado Rúnico,7,1,6,15,220,arma,Gelo,RARO,14,3,150,280,Ativo
+Cajado,Feiticeiro,5,Cajado Ancião,3,5,9,10,180,arma,Água,RARO,15,4,100,320,Ativo
+Adaga,Assassino,7,Adaga Sombria,1,1,19,35,320,arma,Trevas,LENDARIO,22,1,140,550,Ativo
+Arco,Caçador,8,Arco Longo,4,6,12,15,200,arma,Ar,LENDARIO,24,2,220,700,Ativo
