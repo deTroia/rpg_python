@@ -2,11 +2,11 @@ import csv
 import random
 import os
 
-# --- CONFIGURAÇÕES E CONSTANTES ---
+# --- CONFIGURAรรES E CONSTANTES ---
 NOME_ARQUIVO_ITENS = "itens.csv"
 NUMERO_DE_ITENS = 500
 
-# Atributos que serão colunas no CSV
+# Atributos que serรฃo colunas no CSV
 ITENS_ATRIBUTOS = [
     "nome",
     "tipo",
@@ -18,26 +18,26 @@ ITENS_ATRIBUTOS = [
     "preco",
 ]
 
-# --- BIBLIOTECAS DE NOMES TEMÁTICOS ---
+# --- BIBLIOTECAS DE NOMES TEMรTICOS ---
 # Nomes Base (O Objeto principal)
 NOMES_BASE = [
-    "Essência",
+    "Essรชncia",
     "Elixir",
     "Pedra",
     "Fragmento",
-    "Pó",
+    "Pรณ",
     "Raiz",
     "Amuleto",
     "Orbe",
-    "Lágrima",
-    "Núcleo",
+    "Lรกgrima",
+    "Nรบcleo",
     "Cristal",
-    "Óleo",
+    "รleo",
     "Flor",
     "Seda",
     "Quartzo",
     "Prisma",
-    "Vórtice",
+    "Vรณrtice",
     "Alma",
 ]
 
@@ -49,14 +49,14 @@ NOMES_ADJ = [
     "Poderoso",
     "Sombrio",
     "Cura",
-    "Mágico",
-    "Ígneo",
-    "Gélido",
-    "Tóxico",
+    "Mรกgico",
+    "รgneo",
+    "Gรฉlido",
+    "Tรณxico",
     "Veloz",
-    "Lendário",
+    "Lendรกrio",
     "Ancestral",
-    "Épico",
+    "รpico",
     "Espectral",
     "Carmesim",
     "Celeste",
@@ -68,7 +68,7 @@ NOMES_SUFIXO = [
     "do Vazio",
     "Arcana",
     "Espectral",
-    "da Glória",
+    "da Glรณria",
     "Proibido",
     "do Caos",
     "da Destreza",
@@ -76,11 +76,11 @@ NOMES_SUFIXO = [
     "Elemental",
 ]
 
-# --- FUNÇÕES DE GERAÇÃO ---
+# --- FUNรรES DE GERAรรO ---
 
 
 def gerar_nome_item_composto(base, adj):
-    """Cria um nome de 3 partes, usando um Sufixo aleatório."""
+    """Cria um nome de 3 partes, usando um Sufixo aleatรณrio."""
     sufixo = random.choice(NOMES_SUFIXO)
     return f"{base} {adj} {sufixo}"
 
@@ -90,7 +90,7 @@ def gerar_nome_item(raridade):
     base = random.choice(NOMES_BASE)
     adj = random.choice(NOMES_ADJ)
 
-    # Probabilidade de NOME ÉPICO (3 Partes)
+    # Probabilidade de NOME รPICO (3 Partes)
     prob_3_nomes = 0
     if raridade in ["EPICO", "LENDARIO"]:
         prob_3_nomes = 0.60  # 60% de chance
@@ -108,7 +108,7 @@ def gerar_nome_item(raridade):
 
 
 def gerar_atributos_aleatorios(raridade):
-    """Gera atributos numéricos baseados na raridade."""
+    """Gera atributos numรฉricos baseados na raridade."""
 
     # Define o multiplicador baseando-se na raridade
     if raridade == "COMUM":
@@ -122,7 +122,7 @@ def gerar_atributos_aleatorios(raridade):
     else:
         multiplicador = 20  # LENDARIO
 
-    # Valores base (máximo de 5)
+    # Valores base (mรกximo de 5)
     ataque_base = random.randint(0, 5)
     defesa_base = random.randint(0, 5)
     hp_base = random.randint(10, 50)
@@ -132,14 +132,14 @@ def gerar_atributos_aleatorios(raridade):
     defesa = defesa_base * multiplicador
     hp = hp_base * multiplicador
 
-    # Preço é uma função linear dos atributos
+    # Preรงo รฉ uma funรงรฃo linear dos atributos
     preco = (ataque + defesa + hp // 10) * 10
 
     return ataque, defesa, hp, preco
 
 
 def gerar_dados_itens():
-    """Gera a lista completa de 500 itens, garantindo que os nomes são únicos."""
+    """Gera a lista completa de 500 itens, garantindo que os nomes sรฃo รบnicos."""
     itens_gerados = []
     nomes_usados = set()
 
@@ -158,14 +158,14 @@ def gerar_dados_itens():
         else:
             raridade = "LENDARIO"
 
-        # --- 2. Geração de Atributos ---
+        # --- 2. Geraรงรฃo de Atributos ---
         ataque, defesa, hp, preco = gerar_atributos_aleatorios(raridade)
 
-        # --- 3. Lógica de Tipos/Slots ---
-        # Slots para Consumíveis vs. Equipamento
+        # --- 3. Lรณgica de Tipos/Slots ---
+        # Slots para Consumรญveis vs. Equipamento
         if hp > ataque and hp > defesa and random.random() < 0.8:
-            tipo = "Poção"
-            slot = "bolsa"  # Tipo de slot para consumíveis
+            tipo = "Poรงรฃo"
+            slot = "bolsa"  # Tipo de slot para consumรญveis
         elif ataque > defesa and random.random() < 0.6:
             tipo = "Gema"
             slot = "inventario"
@@ -173,12 +173,12 @@ def gerar_dados_itens():
             tipo = "Material"
             slot = "inventario"
 
-        # --- 4. Geração de Nome Único ---
+        # --- 4. Geraรงรฃo de Nome รnico ---
         nome_unico = None
         while nome_unico is None or nome_unico in nomes_usados:
             nome_base = gerar_nome_item(raridade)
             nome_unico = (
-                f"{nome_base} ({i+1})"  # Adiciona o índice como fallback para unicidade
+                f"{nome_base} ({i+1})"  # Adiciona o รญndice como fallback para unicidade
             )
 
             if nome_base in nomes_usados and i < 100:  # Evita tentar infinitamente
@@ -186,7 +186,7 @@ def gerar_dados_itens():
 
         nomes_usados.add(nome_unico)
 
-        # --- 5. Criação do Item ---
+        # --- 5. Criaรงรฃo do Item ---
         item = {
             "nome": nome_unico,
             "tipo": tipo,
@@ -212,14 +212,14 @@ def escrever_arquivo(itens):
             escritor_csv.writeheader()
             escritor_csv.writerows(itens)
         print(
-            f"\n✅ SUCESSO: Foram gerados {NUMERO_DE_ITENS} itens no arquivo '{NOME_ARQUIVO_ITENS}'."
+            f"\nโ SUCESSO: Foram gerados {NUMERO_DE_ITENS} itens no arquivo '{NOME_ARQUIVO_ITENS}'."
         )
     except Exception as e:
-        print(f"\n ❌ ERRO ao escrever o arquivo CSV: {e}")
+        print(f"\n โ ERRO ao escrever o arquivo CSV: {e}")
 
 
-# --- EXECUÇÃO ---
+# --- EXECUรรO ---
 if __name__ == "__main__":
-    print(f"Iniciando a geração de {NUMERO_DE_ITENS} itens...")
+    print(f"Iniciando a geraรงรฃo de {NUMERO_DE_ITENS} itens...")
     dados_itens = gerar_dados_itens()
     escrever_arquivo(dados_itens)

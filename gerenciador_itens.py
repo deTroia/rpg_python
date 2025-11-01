@@ -2,7 +2,7 @@ import csv
 import os
 import random
 
-# --- CONFIGURAÇÕES INICIAIS ---
+# --- CONFIGURAรรES INICIAIS ---
 NOME_ARQUIVO_ITENS = "itens.csv"
 ITENS_ATRIBUTOS = [
     "nome",
@@ -16,7 +16,7 @@ ITENS_ATRIBUTOS = [
 ]
 
 
-# --- FUNÇÕES BÁSICAS DO ARQUIVO ---
+# --- FUNรรES BรSICAS DO ARQUIVO ---
 def ler_arquivo():
     itens = []
     if not os.path.exists(NOME_ARQUIVO_ITENS):
@@ -29,7 +29,7 @@ def ler_arquivo():
             leitor_csv = csv.DictReader(arquivo)
 
             for linha in leitor_csv:
-                # --- Converte os campos numéricos para int
+                # --- Converte os campos numรฉricos para int
                 item = {}
                 for k, v in linha.items():
                     # Lista os itens que devem ser convertidos para in
@@ -62,7 +62,7 @@ def escrever_arquivo(itens):
         ) as arquivo:
             # --- Cria o escritor com todos os campos
             escritor_csv = csv.DictWriter(arquivo, fieldnames=ITENS_ATRIBUTOS)
-            # --- Escreve o cabeçalho
+            # --- Escreve o cabeรงalho
             escritor_csv.writeheader()
             # --- Escreve os itens
             escritor_csv.writerows(itens)
@@ -71,10 +71,10 @@ def escrever_arquivo(itens):
         print(f"\n ERRO ao atualizar {NOME_ARQUIVO_ITENS}: {e}")
 
 
-# --- FUNÇÕES CRUD ---
+# --- FUNรรES CRUD ---
 
 
-# --- FUNÇÃO CRIAR NOVO ITEM ---
+# --- FUNรรO CRIAR NOVO ITEM ---
 def criar_item(itens):
     print("\n --- CADASTRO DE NOVO ITEM ---")
     novo_item = {}
@@ -86,7 +86,7 @@ def criar_item(itens):
             try:
                 val = int(input(f"Digite o valor de {atributos}: "))
             except ValueError:
-                print("Valor inválido. Defina como 0.")
+                print("Valor invรกlido. Defina como 0.")
                 val = 0
         else:
             val = input(f"Digite o {atributos}: ")
@@ -104,7 +104,7 @@ def listar_itens(itens):
 
     print("\n --- LISTA DE ITENS ---")
     print(
-        f"|{'#':<3}|{'Nome':<20}|{'Tipo':<10}|{'Slot':<10}|{'Raridade':<10}|{'Atq':<5}|{'Def':<5}|{'HP':<5}|{'Preço':<8}"
+        f"|{'#':<3}|{'Nome':<20}|{'Tipo':<10}|{'Slot':<10}|{'Raridade':<10}|{'Atq':<5}|{'Def':<5}|{'HP':<5}|{'Preรงo':<8}"
     )
     print("-" * 100)
 
@@ -121,7 +121,7 @@ def atualizar_item(itens):
         return
 
     try:
-        idx = int(input("Digite o número do item que deseja atualizar: ")) - 1
+        idx = int(input("Digite o nรบmero do item que deseja atualizar: ")) - 1
         if 0 <= idx < len(itens):
             item = itens[idx]
             print("\n Atualizando item {item['nome']}")
@@ -142,9 +142,9 @@ def atualizar_item(itens):
             escrever_arquivo(itens)
             print("Item atualizado com sucesso!")
         else:
-            print("Índice inválido.")
+            print("รndice invรกlido.")
     except ValueError:
-        print("Entrada inválida. Por favor, digite um número válido.")
+        print("Entrada invรกlida. Por favor, digite um nรบmero vรกlido.")
 
 
 def deletar_item(itens):
@@ -153,16 +153,16 @@ def deletar_item(itens):
         return
 
     try:
-        idx = int(input("Digite o número do item que deseja deletar: ")) - 1
+        idx = int(input("Digite o nรบmero do item que deseja deletar: ")) - 1
         if 0 <= idx < len(itens):
             nome_removido = itens[idx]["nome"]
             del itens[idx]
             escrever_arquivo(itens)
             print(f"Item {nome_removido} deletado com sucesso!")
         else:
-            print("Índice inválido.")
+            print("รndice invรกlido.")
     except ValueError:
-        print("Entrada inválida. Por favor, digite um número válido.")
+        print("Entrada invรกlida. Por favor, digite um nรบmero vรกlido.")
 
 
 # --- MENU PRINCIPAL ---
@@ -181,7 +181,7 @@ def menu_principal():
         print("0. Sair do Gerenciador")
         print("-" * 40)
 
-        opcao = input("Escolha uma opção: ")
+        opcao = input("Escolha uma opรงรฃo: ")
 
         if opcao == "1":
             criar_item(itens)
@@ -192,10 +192,10 @@ def menu_principal():
         elif opcao == "4":
             deletar_item(itens)
         elif opcao == "0":
-            print("Saindo do Gerenciador. Até logo!")
+            print("Saindo do Gerenciador. Atรฉ logo!")
             break
         else:
-            print("Opção inválida. Tente novamente.")
+            print("Opรงรฃo invรกlida. Tente novamente.")
 
 
 if __name__ == "__main__":

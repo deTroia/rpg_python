@@ -1,709 +1,501 @@
 nome,tipo,slot,raridade,ataque,defesa,hp,preco
-Poção Menor de Cura,Poção,bolsa,COMUM,0,0,25,30
-Fragmento de Ferro Bruto,Material,inventario,COMUM,1,1,5,10
-Essência de Carvão,Material,inventario,COMUM,0,0,0,5
-Elixir de Vigor Leve,Poção,bolsa,COMUM,2,0,15,40
-Pedra Brilhante Rústica,Gema,inventario,COMUM,1,0,3,15
-Amuleto de Sorte Quebrado,Material,inventario,COMUM,0,1,2,12
-Fio de Seda de Aranha,Material,inventario,COMUM,0,0,0,8
-Poção da Sombra,Poção,bolsa,COMUM,0,1,10,25
-Raiz de Cura Pura,Poção,bolsa,COMUM,0,0,30,35
-Núcleo de Pedra Comum,Gema,inventario,COMUM,1,2,5,20
-Poção de Defesa Simples,Poção,bolsa,COMUM,0,2,10,30
-Fragmento de Cristal Azul,Gema,inventario,COMUM,1,1,3,18
-Elixir de Agilidade,Poção,bolsa,COMUM,3,0,15,45
-Erva de Olho de Gato,Poção,bolsa,COMUM,2,0,5,15
-Essência de Luz Fraca,Material,inventario,COMUM,0,0,0,10
-Pedra de Fogo Pequena,Gema,inventario,INCOMUM,5,0,10,60
-Amuleto de Gelo Leve,Material,inventario,INCOMUM,0,3,5,40
-Poção Média de Cura,Poção,bolsa,INCOMUM,0,0,50,80
-Elixir de Força Básico,Poção,bolsa,INCOMUM,5,0,10,75
-Fragmento de Obsidiana,Material,inventario,INCOMUM,2,2,8,45
-Essência Ígnea,Gema,inventario,INCOMUM,4,0,12,55
-Pedra do Vento Veloz,Material,inventario,INCOMUM,0,0,0,30
-Poção de Resistência,Poção,bolsa,INCOMUM,0,5,15,70
-Raiz Envenenada,Consumível,bolsa,INCOMUM,0,0,0,25
-Núcleo de Terra Firme,Gema,inventario,RARO,8,5,20,150
-Elixir da Mente Lenta,Poção,bolsa,RARO,0,0,-5,80
-Fragmento Ancestral,Material,inventario,RARO,5,5,10,120
-Lágrima de Sereia,Poção,bolsa,RARO,0,0,100,200
-Amuleto do Caçador,Gema,inventario,RARO,10,2,0,180
-Pedra de Gelo Cristalina,Gema,inventario,RARO,3,8,15,160
-Poção de Fúria Bruta,Poção,bolsa,RARO,12,0,0,175
-Essência Sombria Concentrada,Material,inventario,RARO,0,0,0,90
-Elixir da Visão Verdadeira,Poção,bolsa,EPICO,0,0,50,300
-Orbe de Poder Antigo,Gema,inventario,EPICO,15,5,30,450
-Fragmento Épico de Vazio,Material,inventario,EPICO,8,8,20,380
-Poção de Velocidade Máxima,Poção,bolsa,EPICO,5,0,0,400
-Raiz do Curandeiro Mestre,Poção,bolsa,EPICO,0,0,200,600
-Amuleto da Destreza,Gema,inventario,EPICO,12,10,0,550
-Pedra do Trovão,Gema,inventario,EPICO,20,0,50,700
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Elixir de Imortalidade,Poção,bolsa,LENDARIO,0,0,500,2500
-Lágrima dos Deuses,Poção,bolsa,LENDARIO,10,10,300,3000
-Prisma da Alma,Gema,inventario,LENDARIO,30,20,0,1800
-Amuleto Ancestral,Gema,inventario,LENDARIO,20,25,0,2200
-Essência de Cura Pura,Poção,bolsa,COMUM,0,0,35,40
-Pedra de Sangue Seca,Material,inventario,COMUM,1,0,5,12
-Fragmento de Cristal Negro,Gema,inventario,RARO,5,5,10,130
-Poção da Sorte,Poção,bolsa,COMUM,0,0,10,35
-Elixir de Resistência,Poção,bolsa,COMUM,0,3,10,30
-Núcleo de Vento,Gema,inventario,INCOMUM,2,1,8,45
-Raiz Forte,Poção,bolsa,COMUM,2,0,10,25
-Fragmento Ígneo,Gema,inventario,RARO,10,0,15,160
-Essência de Gelo,Poção,bolsa,INCOMUM,0,2,15,45
-Pedra de Vida,Gema,inventario,COMUM,0,0,20,20
-Elixir de Cura Forte,Poção,bolsa,RARO,0,0,150,300
-Poção de Mana Mínima,Poção,bolsa,COMUM,0,0,0,15
-Amuleto de Ferro,Material,inventario,COMUM,0,2,0,18
-Fragmento Sônico,Gema,inventario,EPICO,18,0,20,400
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo de Fogo,Gema,inventario,LENDARIO,35,0,80,1500
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-nome,tipo,slot,raridade,ataque,defesa,hp,preco
-Poção da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Forte,Poção,bolsa,COMUM,2,0,10,25
-Poção de Mana Mínima,Poção,bolsa,COMUM,0,0,0,15
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,RARO,15,0,0,200
-Fragmento de Ouro,Material,inventario,RARO,0,0,0,250
-Essência de Trevas,Poção,bolsa,EPICO,5,5,50,450
-Núcleo Elemental,Material,inventario,LENDARIO,25,15,50,1200
-Poção de Regeneração,Poção,bolsa,LENDARIO,0,0,100,800
-Pedra de Cristal Puro,Gema,inventario,LENDARIO,20,20,60,2000
-Fragmento do Vazio,Material,inventario,LENDARIO,0,0,0,1000
-Essência da Alma,Poção,bolsa,LENDARIO,0,0,350,3500
-Amuleto de Força,Gema,inventario,EPICO,10,0,20,350
-Poção de Mana Alta,Poção,bolsa,RARO,0,0,0,120
-Fragmento da Luz,Material,inventario,RARO,0,0,0,80
-Elixir da Sorte,Poção,bolsa,INCOMUM,0,0,20,40
-Pedra Rúnica,Gema,inventario,RARO,5,5,10,100
-Núcleo de Gelo,Gema,inventario,INCOMUM,0,5,10,50
-Raiz Seca,Consumível,bolsa,COMUM,0,0,5,5
-Poção de Ataque Mínimo,Poção,bolsa,COMUM,1,0,10,25
-Fragmento da Água,Gema,inventario,INCOMUM,0,2,8,40
-Elixir da Destreza,Poção,bolsa,EPICO,10,0,0,350
-Poção de Defesa Forte,Poção,bolsa,RARO,0,10,20,150
-Raiz Amaldiçoada,Consumível,bolsa,COMUM,-2,0,5,10
-Óleo de Engrenagem,Material,inventario,INCOMUM,0,0,0,30
-Pedra Mística,Gema,inventario,EPICO,15,15,40,650
-Poção da Visão,Poção,bolsa,COMUM,0,0,10,20
-Elixir da Fúria,Poção,bolsa,
+Elixir Pequeno do Vazio (1),Material,inventario,COMUM,0,1,48,50
+Essรชncia de Celeste (2),Poรงรฃo,bolsa,COMUM,0,5,46,90
+Prisma de Pequeno (3),Poรงรฃo,bolsa,COMUM,1,2,42,70
+Seda de Espectral (4),Poรงรฃo,bolsa,COMUM,1,1,43,60
+Cristal de Veloz (5),Poรงรฃo,bolsa,COMUM,4,5,47,130
+Nรบcleo Ancestral do Gigante (6),Poรงรฃo,bolsa,LENDARIO,100,20,1000,2200
+Prisma de Tรณxico (7),Material,inventario,COMUM,1,1,21,40
+Essรชncia Poderoso Proibido (8),Poรงรฃo,bolsa,COMUM,2,3,47,90
+Pedra de Gรฉlido (9),Poรงรฃo,bolsa,COMUM,4,3,33,100
+Amuleto de Brilhante (10),Poรงรฃo,bolsa,COMUM,3,3,40,100
+Orbe de Ancestral (11),Material,inventario,INCOMUM,8,0,84,160
+Prisma de Poderoso (12),Gema,inventario,COMUM,5,3,13,90
+Prisma de Ancestral (13),Poรงรฃo,bolsa,COMUM,4,5,35,120
+Nรบcleo de รpico (14),Poรงรฃo,bolsa,RARO,20,20,90,490
+Elixir de Lendรกrio (15),Poรงรฃo,bolsa,RARO,25,10,120,470
+Raiz de Espectral (16),Poรงรฃo,bolsa,COMUM,5,3,23,100
+Fragmento de Veloz (17),Material,inventario,RARO,25,5,70,370
+Seda de Carmesim (18),Poรงรฃo,bolsa,COMUM,1,3,32,70
+รleo de Ancestral (19),Poรงรฃo,bolsa,COMUM,2,3,44,90
+Lรกgrima de Veloz (20),Gema,inventario,COMUM,4,0,38,70
+รleo de Carmesim (21),Poรงรฃo,bolsa,COMUM,0,4,20,60
+Vรณrtice de Veloz (22),Poรงรฃo,bolsa,INCOMUM,2,0,68,80
+Raiz Pequeno da Profundeza (23),Poรงรฃo,bolsa,COMUM,4,5,31,120
+Seda de Pequeno (24),Poรงรฃo,bolsa,RARO,25,5,180,480
+Fragmento Antigo Espectral (25),Poรงรฃo,bolsa,INCOMUM,2,8,78,170
+Vรณrtice de Carmesim (26),Poรงรฃo,bolsa,COMUM,3,3,38,90
+Lรกgrima de Lendรกrio (27),Gema,inventario,COMUM,1,0,25,30
+รleo Gรฉlido da Destreza (28),Poรงรฃo,bolsa,LENDARIO,20,60,200,1000
+Flor Celeste da Glรณria (29),Material,inventario,RARO,10,10,120,320
+Vรณrtice Ancestral Espectral (30),Material,inventario,LENDARIO,100,40,1000,2400
+Prisma de Poderoso (31),Poรงรฃo,bolsa,COMUM,5,5,36,130
+Vรณrtice de Pequeno (32),Poรงรฃo,bolsa,COMUM,3,2,48,90
+Cristal Poderoso do Vazio (33),Poรงรฃo,bolsa,COMUM,1,3,49,80
+Alma de Celeste (34),Poรงรฃo,bolsa,COMUM,4,5,43,130
+Fragmento de Lendรกrio (35),Poรงรฃo,bolsa,COMUM,5,3,47,120
+Orbe de Celeste (36),Poรงรฃo,bolsa,INCOMUM,2,4,34,90
+Essรชncia de รgneo (37),Poรงรฃo,bolsa,COMUM,4,0,48,80
+Pรณ de Veloz (38),Poรงรฃo,bolsa,COMUM,4,2,47,100
+รleo de รpico (39),Poรงรฃo,bolsa,COMUM,0,0,18,10
+Elixir Sombrio da Destreza (40),Material,inventario,COMUM,2,5,43,110
+Nรบcleo de Poderoso (41),Poรงรฃo,bolsa,COMUM,3,4,13,80
+Fragmento de Tรณxico (42),Poรงรฃo,bolsa,COMUM,0,2,44,60
+Quartzo de Brilhante (43),Poรงรฃo,bolsa,RARO,0,5,230,280
+Pรณ de Carmesim (44),Poรงรฃo,bolsa,LENDARIO,60,60,740,1940
+Raiz de Espectral (45),Poรงรฃo,bolsa,COMUM,2,3,47,90
+Alma de Mรกgico (46),Poรงรฃo,bolsa,RARO,20,10,100,400
+Nรบcleo de Poderoso (47),Poรงรฃo,bolsa,COMUM,0,1,27,30
+Alma de Pequeno (48),Poรงรฃo,bolsa,RARO,20,5,120,370
+Prisma de Celeste (49),Poรงรฃo,bolsa,RARO,0,5,190,240
+Essรชncia de Veloz (50),Poรงรฃo,bolsa,COMUM,1,4,16,60
+Prisma de Tรณxico (51),Poรงรฃo,bolsa,INCOMUM,6,4,94,190
+Raiz de Ancestral (52),Poรงรฃo,bolsa,INCOMUM,4,4,44,120
+Seda de Mรกgico (53),Poรงรฃo,bolsa,COMUM,2,1,24,50
+Elixir de Ancestral (54),Poรงรฃo,bolsa,LENDARIO,40,100,1000,2400
+Raiz de Espectral (55),Gema,inventario,RARO,25,10,215,560
+Alma Lendรกrio da Profundeza (56),Poรงรฃo,bolsa,COMUM,4,0,39,70
+Nรบcleo de Lendรกrio (57),Poรงรฃo,bolsa,COMUM,0,1,42,50
+Flor de รpico (58),Gema,inventario,COMUM,5,2,39,100
+Cristal de Antigo (59),Poรงรฃo,bolsa,INCOMUM,0,0,58,50
+Vรณrtice Tรณxico Proibido (60),Poรงรฃo,bolsa,INCOMUM,0,10,20,120
+Pedra de Cura (61),Poรงรฃo,bolsa,INCOMUM,0,4,20,60
+Essรชncia de Brilhante (62),Poรงรฃo,bolsa,COMUM,4,3,20,90
+Quartzo Poderoso Elemental (63),Poรงรฃo,bolsa,LENDARIO,60,20,800,1600
+Orbe de Antigo (64),Poรงรฃo,bolsa,COMUM,1,3,46,80
+Pedra de Lendรกrio (65),Poรงรฃo,bolsa,RARO,25,25,125,620
+Elixir de Carmesim (66),Poรงรฃo,bolsa,COMUM,3,3,10,70
+Fragmento de Espectral (67),Poรงรฃo,bolsa,COMUM,2,4,46,100
+Raiz de รpico (68),Poรงรฃo,bolsa,INCOMUM,8,4,100,220
+Pedra รgneo da Profundeza (69),Material,inventario,EPICO,10,30,200,600
+Orbe Veloz Proibido (70),Poรงรฃo,bolsa,RARO,25,10,225,570
+Flor รpico da Glรณria (71),Material,inventario,LENDARIO,100,60,300,1900
+Orbe de Ancestral (72),Poรงรฃo,bolsa,COMUM,1,4,50,100
+Elixir de Mรกgico (73),Poรงรฃo,bolsa,COMUM,5,0,19,60
+Pรณ de Mรกgico (74),Poรงรฃo,bolsa,COMUM,3,1,35,70
+Vรณrtice de Veloz (75),Poรงรฃo,bolsa,COMUM,0,1,27,30
+Amuleto รpico do Caos (76),Poรงรฃo,bolsa,COMUM,1,3,28,60
+Elixir de Celeste (77),Poรงรฃo,bolsa,INCOMUM,6,10,66,220
+Alma de รpico (78),Material,inventario,COMUM,1,5,13,70
+Cristal de Tรณxico (79),Poรงรฃo,bolsa,COMUM,5,1,34,90
+Nรบcleo de Carmesim (80),Poรงรฃo,bolsa,COMUM,5,2,39,100
+Raiz de Ancestral (81),Poรงรฃo,bolsa,INCOMUM,4,2,62,120
+Alma de Poderoso (82),Poรงรฃo,bolsa,RARO,25,5,250,550
+Cristal de Mรกgico (83),Poรงรฃo,bolsa,COMUM,1,2,35,60
+Alma de Lendรกrio (84),Poรงรฃo,bolsa,INCOMUM,6,4,24,120
+Orbe de Pequeno (85),Poรงรฃo,bolsa,INCOMUM,10,0,62,160
+Fragmento de Espectral (86),Poรงรฃo,bolsa,COMUM,1,3,30,70
+Alma de Tรณxico (87),Poรงรฃo,bolsa,INCOMUM,6,0,96,150
+Lรกgrima Espectral Arcana (88),Poรงรฃo,bolsa,INCOMUM,6,10,70,230
+Pedra de Ancestral (89),Poรงรฃo,bolsa,COMUM,5,0,21,70
+Prisma de Ancestral (90),Poรงรฃo,bolsa,COMUM,3,4,16,80
+Vรณrtice Ancestral do Caos (91),Poรงรฃo,bolsa,COMUM,4,2,25,80
+Nรบcleo de Gรฉlido (92),Poรงรฃo,bolsa,INCOMUM,0,0,78,70
+Alma Poderoso Arcana (93),Poรงรฃo,bolsa,RARO,10,20,100,400
+Cristal de Mรกgico (94),Poรงรฃo,bolsa,COMUM,0,0,23,20
+Lรกgrima de Espectral (95),Poรงรฃo,bolsa,INCOMUM,2,6,52,130
+Raiz de Gรฉlido (96),Poรงรฃo,bolsa,COMUM,0,1,44,50
+Orbe de Ancestral (97),Poรงรฃo,bolsa,COMUM,2,3,29,70
+Amuleto รgneo do Caos (98),Poรงรฃo,bolsa,LENDARIO,40,60,440,1440
+Seda Ancestral da Destreza (99),Poรงรฃo,bolsa,RARO,25,15,105,500
+Essรชncia de Pequeno (100),Material,inventario,COMUM,2,0,37,50
+Lรกgrima de Gรฉlido (101),Gema,inventario,INCOMUM,10,2,76,190
+Nรบcleo de Celeste (102),Poรงรฃo,bolsa,COMUM,2,1,46,70
+Seda de Veloz (103),Material,inventario,RARO,0,20,235,430
+Fragmento de Veloz (104),Poรงรฃo,bolsa,COMUM,2,1,16,40
+Vรณrtice de Celeste (105),Poรงรฃo,bolsa,COMUM,0,1,38,40
+Cristal de Ancestral (106),Poรงรฃo,bolsa,LENDARIO,40,0,720,1120
+Fragmento de Poderoso (107),Poรงรฃo,bolsa,COMUM,0,4,37,70
+Orbe de Antigo (108),Poรงรฃo,bolsa,COMUM,5,1,17,70
+Elixir de Ancestral (109),Gema,inventario,RARO,25,5,180,480
+Quartzo de Brilhante (110),Poรงรฃo,bolsa,INCOMUM,4,4,56,130
+Raiz Sombrio Elemental (111),Poรงรฃo,bolsa,COMUM,2,1,48,70
+Pรณ de Lendรกrio (112),Poรงรฃo,bolsa,COMUM,5,4,25,110
+รleo de Antigo (113),Poรงรฃo,bolsa,INCOMUM,8,10,100,280
+Prisma de Tรณxico (114),Gema,inventario,COMUM,1,0,36,40
+Alma de Celeste (115),Poรงรฃo,bolsa,INCOMUM,10,2,24,140
+Elixir de Tรณxico (116),Poรงรฃo,bolsa,COMUM,4,1,31,80
+Orbe de Sombrio (117),Poรงรฃo,bolsa,INCOMUM,10,10,80,280
+Fragmento de Antigo (118),Poรงรฃo,bolsa,COMUM,2,0,19,30
+Pedra de Carmesim (119),Poรงรฃo,bolsa,INCOMUM,6,10,44,200
+Flor Tรณxico da Glรณria (120),Poรงรฃo,bolsa,COMUM,4,2,22,80
+Alma de Poderoso (121),Poรงรฃo,bolsa,INCOMUM,8,10,90,270
+Quartzo Brilhante Arcana (122),Poรงรฃo,bolsa,RARO,5,20,120,370
+Alma de Lendรกrio (123),Poรงรฃo,bolsa,INCOMUM,6,2,22,100
+Prisma de Espectral (124),Poรงรฃo,bolsa,INCOMUM,2,6,66,140
+Alma de Ancestral (125),Poรงรฃo,bolsa,COMUM,3,3,10,70
+Raiz de Veloz (126),Material,inventario,COMUM,1,1,29,40
+Prisma Pequeno Proibido (127),Poรงรฃo,bolsa,EPICO,30,10,230,630
+Amuleto Espectral da Glรณria (128),Poรงรฃo,bolsa,RARO,0,20,95,290
+Nรบcleo de Tรณxico (129),Material,inventario,INCOMUM,4,4,48,120
+Prisma Veloz Arcana (130),Poรงรฃo,bolsa,EPICO,0,20,260,460
+Seda de Tรณxico (131),Poรงรฃo,bolsa,INCOMUM,10,10,22,220
+Quartzo de Veloz (132),Poรงรฃo,bolsa,INCOMUM,10,4,82,220
+Elixir Tรณxico Arcana (133),Poรงรฃo,bolsa,RARO,5,5,225,320
+Raiz de Sombrio (134),Poรงรฃo,bolsa,COMUM,5,0,36,80
+Lรกgrima de รgneo (135),Poรงรฃo,bolsa,COMUM,3,2,44,90
+Seda de Poderoso (136),Poรงรฃo,bolsa,COMUM,1,0,35,40
+Elixir de Veloz (137),Poรงรฃo,bolsa,COMUM,5,0,20,70
+Nรบcleo Pequeno do Caos (138),Poรงรฃo,bolsa,EPICO,50,10,460,1060
+Essรชncia Celeste do Gigante (139),Poรงรฃo,bolsa,EPICO,50,30,240,1040
+Raiz de Lendรกrio (140),Poรงรฃo,bolsa,COMUM,0,0,34,30
+Lรกgrima Ancestral Proibido (141),Poรงรฃo,bolsa,EPICO,30,50,310,1110
+Prisma de Gรฉlido (142),Poรงรฃo,bolsa,COMUM,0,1,29,30
+Fragmento Pequeno Arcana (143),Poรงรฃo,bolsa,EPICO,20,10,500,800
+Pedra de Celeste (144),Poรงรฃo,bolsa,COMUM,4,4,22,100
+Pedra de Antigo (145),Poรงรฃo,bolsa,COMUM,0,1,32,40
+Seda de Veloz (146),Poรงรฃo,bolsa,INCOMUM,4,6,72,170
+Elixir de Ancestral (147),Poรงรฃo,bolsa,INCOMUM,6,4,86,180
+Cristal de รpico (148),Poรงรฃo,bolsa,INCOMUM,8,6,42,180
+Orbe de Lendรกrio (149),Material,inventario,COMUM,4,4,50,130
+Alma de Tรณxico (150),Poรงรฃo,bolsa,COMUM,5,3,18,90
+Quartzo de Lendรกrio (151),Poรงรฃo,bolsa,INCOMUM,2,0,86,100
+Lรกgrima Espectral do Vazio (152),Poรงรฃo,bolsa,RARO,0,20,145,340
+Seda de Gรฉlido (153),Material,inventario,INCOMUM,4,6,48,140
+Vรณrtice de Antigo (154),Poรงรฃo,bolsa,COMUM,1,3,40,80
+Quartzo de รpico (155),Poรงรฃo,bolsa,COMUM,0,0,20,20
+Amuleto Cura da Profundeza (156),Gema,inventario,RARO,10,0,245,340
+Fragmento de Veloz (157),Poรงรฃo,bolsa,COMUM,4,1,14,60
+Vรณrtice de Veloz (158),Material,inventario,RARO,20,20,85,480
+Cristal de รpico (159),Poรงรฃo,bolsa,INCOMUM,0,10,50,150
+Fragmento de รpico (160),Poรงรฃo,bolsa,EPICO,50,50,220,1220
+Flor de Lendรกrio (161),Poรงรฃo,bolsa,COMUM,2,4,18,70
+Elixir de Brilhante (162),Material,inventario,RARO,0,20,145,340
+Orbe de Carmesim (163),Poรงรฃo,bolsa,COMUM,3,2,41,90
+Essรชncia de รpico (164),Poรงรฃo,bolsa,RARO,25,15,75,470
+Pedra de Tรณxico (165),Material,inventario,COMUM,4,3,33,100
+Essรชncia de Celeste (166),Poรงรฃo,bolsa,COMUM,3,3,45,100
+Cristal de Tรณxico (167),Poรงรฃo,bolsa,RARO,10,10,50,250
+Fragmento de Celeste (168),Poรงรฃo,bolsa,COMUM,4,0,50,90
+Raiz Tรณxico da Destreza (169),Poรงรฃo,bolsa,EPICO,10,0,210,310
+Lรกgrima de รpico (170),Poรงรฃo,bolsa,COMUM,0,3,49,70
+รleo de Tรณxico (171),Poรงรฃo,bolsa,LENDARIO,0,100,780,1780
+Pรณ Gรฉlido da Destreza (172),Poรงรฃo,bolsa,RARO,5,15,210,410
+รleo Mรกgico da Destreza (173),Material,inventario,RARO,20,15,55,400
+Nรบcleo de Poderoso (174),Poรงรฃo,bolsa,COMUM,4,0,15,50
+Quartzo de Ancestral (175),Poรงรฃo,bolsa,COMUM,1,1,16,30
+Alma de Antigo (176),Poรงรฃo,bolsa,RARO,10,25,60,410
+Lรกgrima Antigo do Caos (177),Poรงรฃo,bolsa,COMUM,4,3,35,100
+Lรกgrima de Tรณxico (178),Poรงรฃo,bolsa,RARO,5,5,55,150
+Prisma de รpico (179),Poรงรฃo,bolsa,RARO,10,0,90,190
+Nรบcleo de Pequeno (180),Poรงรฃo,bolsa,EPICO,50,30,110,910
+Pedra de Veloz (181),Poรงรฃo,bolsa,COMUM,1,1,45,60
+Nรบcleo de Gรฉlido (182),Poรงรฃo,bolsa,INCOMUM,4,10,58,190
+Pedra de Pequeno (183),Poรงรฃo,bolsa,COMUM,4,0,48,80
+Prisma Tรณxico do Caos (184),Material,inventario,EPICO,20,40,480,1080
+Cristal de Poderoso (185),Poรงรฃo,bolsa,INCOMUM,8,0,66,140
+Pedra de Antigo (186),Poรงรฃo,bolsa,INCOMUM,2,6,74,150
+Flor de Mรกgico (187),Poรงรฃo,bolsa,INCOMUM,8,4,68,180
+Lรกgrima de Celeste (188),Poรงรฃo,bolsa,COMUM,1,0,18,20
+Flor de Ancestral (189),Material,inventario,COMUM,1,1,34,50
+Nรบcleo de Ancestral (190),Poรงรฃo,bolsa,COMUM,5,4,20,110
+Prisma de Pequeno (191),Poรงรฃo,bolsa,COMUM,3,1,32,70
+Essรชncia de Gรฉlido (192),Poรงรฃo,bolsa,COMUM,1,5,18,70
+Alma de Sombrio (193),Gema,inventario,RARO,15,0,165,310
+Flor Poderoso Espectral (194),Poรงรฃo,bolsa,INCOMUM,6,4,62,160
+Vรณrtice de Poderoso (195),Poรงรฃo,bolsa,INCOMUM,0,6,60,120
+Amuleto de Cura (196),Poรงรฃo,bolsa,INCOMUM,0,6,74,130
+Alma de Sombrio (197),Poรงรฃo,bolsa,COMUM,5,3,48,120
+Pรณ de Poderoso (198),Gema,inventario,INCOMUM,10,0,32,130
+Flor de Ancestral (199),Poรงรฃo,bolsa,INCOMUM,10,10,58,250
+Vรณrtice Celeste da Profundeza (200),Material,inventario,COMUM,2,0,13,30
+Amuleto de Sombrio (201),Material,inventario,RARO,0,20,250,450
+Fragmento de Sombrio (202),Poรงรฃo,bolsa,EPICO,40,20,300,900
+Fragmento de รgneo (203),Poรงรฃo,bolsa,COMUM,0,3,30,60
+Raiz de รgneo (204),Poรงรฃo,bolsa,COMUM,2,3,34,80
+รleo de Poderoso (205),Poรงรฃo,bolsa,INCOMUM,6,10,48,200
+Elixir รpico da Destreza (206),Poรงรฃo,bolsa,LENDARIO,80,100,260,2060
+Vรณrtice de Lendรกrio (207),Poรงรฃo,bolsa,COMUM,2,2,38,70
+Pรณ Carmesim do Vazio (208),Poรงรฃo,bolsa,COMUM,5,3,26,100
+Lรกgrima Cura Elemental (209),Poรงรฃo,bolsa,COMUM,2,0,33,50
+Vรณrtice de Cura (210),Gema,inventario,COMUM,3,0,12,40
+Pรณ de Sombrio (211),Poรงรฃo,bolsa,COMUM,1,0,14,20
+Fragmento Espectral Proibido (212),Material,inventario,INCOMUM,0,8,90,170
+Lรกgrima de รgneo (213),Poรงรฃo,bolsa,COMUM,1,1,27,40
+Orbe de Celeste (214),Poรงรฃo,bolsa,EPICO,10,30,170,570
+Fragmento de Lendรกrio (215),Poรงรฃo,bolsa,COMUM,1,1,15,30
+Cristal de Sombrio (216),Poรงรฃo,bolsa,COMUM,0,1,50,60
+Fragmento รpico da Destreza (217),Poรงรฃo,bolsa,COMUM,1,2,20,50
+Fragmento de Gรฉlido (218),Poรงรฃo,bolsa,RARO,25,5,120,420
+Pedra de Celeste (219),Gema,inventario,COMUM,5,2,49,110
+Prisma de Veloz (220),Poรงรฃo,bolsa,COMUM,2,5,25,90
+Raiz Veloz do Caos (221),Poรงรฃo,bolsa,COMUM,5,5,10,110
+Seda de Espectral (222),Poรงรฃo,bolsa,INCOMUM,2,0,42,60
+Flor de Ancestral (223),Poรงรฃo,bolsa,COMUM,1,3,28,60
+Amuleto de Carmesim (224),Poรงรฃo,bolsa,INCOMUM,2,8,66,160
+Orbe Mรกgico da Glรณria (225),Poรงรฃo,bolsa,EPICO,40,0,320,720
+Seda de Carmesim (226),Poรงรฃo,bolsa,RARO,15,5,190,390
+Lรกgrima de Tรณxico (227),Material,inventario,RARO,20,20,185,580
+Vรณrtice de Gรฉlido (228),Poรงรฃo,bolsa,COMUM,0,5,11,60
+Elixir de Gรฉlido (229),Poรงรฃo,bolsa,RARO,20,10,90,390
+Lรกgrima de Ancestral (230),Poรงรฃo,bolsa,COMUM,1,0,12,20
+รleo Ancestral do Vazio (231),Poรงรฃo,bolsa,RARO,25,15,235,630
+Seda de Veloz (232),Poรงรฃo,bolsa,RARO,15,10,110,360
+Quartzo de Veloz (233),Poรงรฃo,bolsa,COMUM,3,3,16,70
+Lรกgrima Carmesim Elemental (234),Poรงรฃo,bolsa,COMUM,5,3,46,120
+Lรกgrima de Mรกgico (235),Poรงรฃo,bolsa,COMUM,4,3,13,80
+Amuleto de Antigo (236),Gema,inventario,COMUM,5,4,11,100
+Essรชncia de Brilhante (237),Poรงรฃo,bolsa,INCOMUM,2,6,94,170
+Cristal de Celeste (238),Poรงรฃo,bolsa,COMUM,4,3,10,80
+Amuleto de Mรกgico (239),Poรงรฃo,bolsa,COMUM,1,5,10,70
+Nรบcleo Ancestral Espectral (240),Poรงรฃo,bolsa,COMUM,0,3,12,40
+Pรณ de Gรฉlido (241),Poรงรฃo,bolsa,COMUM,2,2,26,60
+Cristal de Cura (242),Poรงรฃo,bolsa,INCOMUM,6,6,78,190
+Cristal Tรณxico Arcana (243),Poรงรฃo,bolsa,COMUM,1,5,17,70
+Elixir Poderoso do Gigante (244),Poรงรฃo,bolsa,COMUM,1,4,25,70
+Alma de Antigo (245),Poรงรฃo,bolsa,COMUM,0,3,49,70
+Alma รpico da Glรณria (246),Poรงรฃo,bolsa,COMUM,1,5,29,80
+Elixir de Carmesim (247),Material,inventario,INCOMUM,4,8,68,180
+Pรณ de รgneo (248),Poรงรฃo,bolsa,COMUM,1,0,35,40
+Cristal de Ancestral (249),Poรงรฃo,bolsa,COMUM,4,1,45,90
+Orbe de Ancestral (250),Poรงรฃo,bolsa,COMUM,4,5,10,100
+Nรบcleo de Ancestral (251),Material,inventario,COMUM,2,0,24,40
+Lรกgrima de Antigo (252),Poรงรฃo,bolsa,INCOMUM,4,8,80,200
+Quartzo de Poderoso (253),Poรงรฃo,bolsa,RARO,5,5,125,220
+Amuleto de Pequeno (254),Poรงรฃo,bolsa,INCOMUM,2,4,54,110
+Essรชncia de รpico (255),Poรงรฃo,bolsa,RARO,10,0,140,240
+Quartzo de Brilhante (256),Poรงรฃo,bolsa,COMUM,5,2,18,80
+Raiz Sombrio da Destreza (257),Poรงรฃo,bolsa,INCOMUM,0,4,34,70
+Orbe Antigo Elemental (258),Poรงรฃo,bolsa,COMUM,5,2,49,110
+Seda de Tรณxico (259),Poรงรฃo,bolsa,COMUM,2,5,25,90
+Alma de Antigo (260),Poรงรฃo,bolsa,COMUM,0,5,50,100
+Seda de Lendรกrio (261),Material,inventario,COMUM,3,3,39,90
+Prisma Gรฉlido Proibido (262),Poรงรฃo,bolsa,INCOMUM,0,8,50,130
+Amuleto de Cura (263),Poรงรฃo,bolsa,COMUM,0,4,32,70
+Cristal Cura Elemental (264),Poรงรฃo,bolsa,EPICO,50,0,300,800
+Quartzo de Veloz (265),Poรงรฃo,bolsa,COMUM,4,4,20,100
+Lรกgrima de Celeste (266),Poรงรฃo,bolsa,RARO,10,0,195,290
+Pedra de Gรฉlido (267),Poรงรฃo,bolsa,COMUM,3,2,21,70
+Prisma de Lendรกrio (268),Poรงรฃo,bolsa,COMUM,3,0,11,40
+Quartzo de Celeste (269),Poรงรฃo,bolsa,COMUM,2,0,50,70
+Amuleto de Cura (270),Poรงรฃo,bolsa,INCOMUM,2,4,96,150
+Elixir de Gรฉlido (271),Poรงรฃo,bolsa,COMUM,2,2,48,80
+Amuleto de Poderoso (272),Poรงรฃo,bolsa,RARO,20,10,155,450
+Lรกgrima de Carmesim (273),Poรงรฃo,bolsa,RARO,15,25,65,460
+Pรณ de Sombrio (274),Gema,inventario,COMUM,3,1,42,80
+Vรณrtice de Antigo (275),Poรงรฃo,bolsa,RARO,10,10,60,260
+Nรบcleo Ancestral da Profundeza (276),Poรงรฃo,bolsa,COMUM,4,2,17,70
+Prisma de Mรกgico (277),Poรงรฃo,bolsa,COMUM,1,4,37,80
+Raiz de Veloz (278),Poรงรฃo,bolsa,INCOMUM,4,2,50,110
+Flor Pequeno Espectral (279),Poรงรฃo,bolsa,COMUM,5,0,17,60
+Essรชncia de รgneo (280),Material,inventario,COMUM,1,5,50,110
+Raiz Gรฉlido Elemental (281),Poรงรฃo,bolsa,EPICO,50,10,220,820
+Pรณ de Ancestral (282),Material,inventario,INCOMUM,4,8,26,140
+Raiz de Celeste (283),Poรงรฃo,bolsa,COMUM,4,0,16,50
+Raiz de Gรฉlido (284),Poรงรฃo,bolsa,INCOMUM,4,10,94,230
+Alma de Cura (285),Poรงรฃo,bolsa,RARO,5,25,220,520
+Fragmento de รgneo (286),Poรงรฃo,bolsa,COMUM,1,3,30,70
+Flor de Cura (287),Poรงรฃo,bolsa,COMUM,2,0,49,60
+Lรกgrima Cura da Glรณria (288),Poรงรฃo,bolsa,COMUM,3,3,15,70
+Vรณrtice de Veloz (289),Poรงรฃo,bolsa,COMUM,2,0,18,30
+Raiz de Antigo (290),Poรงรฃo,bolsa,INCOMUM,10,8,62,240
+Prisma de รgneo (291),Poรงรฃo,bolsa,RARO,20,20,175,570
+Nรบcleo de Antigo (292),Poรงรฃo,bolsa,INCOMUM,4,6,88,180
+Nรบcleo de Sombrio (293),Poรงรฃo,bolsa,INCOMUM,8,10,70,250
+Seda de Espectral (294),Poรงรฃo,bolsa,COMUM,0,5,27,70
+Alma de Veloz (295),Poรงรฃo,bolsa,COMUM,4,5,29,110
+Raiz de Sombrio (296),Material,inventario,INCOMUM,8,6,78,210
+Raiz Ancestral do Gigante (297),Poรงรฃo,bolsa,EPICO,40,0,370,770
+Essรชncia de Brilhante (298),Poรงรฃo,bolsa,COMUM,5,5,16,110
+Elixir de Sombrio (299),Poรงรฃo,bolsa,INCOMUM,8,10,66,240
+Essรชncia de Antigo (300),Poรงรฃo,bolsa,INCOMUM,0,0,28,20
+Cristal de Celeste (301),Poรงรฃo,bolsa,COMUM,0,4,17,50
+Amuleto de รgneo (302),Poรงรฃo,bolsa,COMUM,1,5,25,80
+Essรชncia Tรณxico do Caos (303),Gema,inventario,RARO,20,5,110,360
+Prisma de Poderoso (304),Poรงรฃo,bolsa,COMUM,3,3,36,90
+Raiz de Mรกgico (305),Poรงรฃo,bolsa,INCOMUM,6,0,48,100
+Fragmento Pequeno Elemental (306),Poรงรฃo,bolsa,INCOMUM,2,2,58,90
+Orbe de Ancestral (307),Material,inventario,COMUM,2,0,15,30
+Fragmento de Pequeno (308),Material,inventario,COMUM,0,4,39,70
+Pedra de รgneo (309),Material,inventario,COMUM,0,3,10,40
+Nรบcleo de Antigo (310),Poรงรฃo,bolsa,COMUM,4,4,29,100
+Pรณ de Gรฉlido (311),Poรงรฃo,bolsa,COMUM,3,5,42,120
+Quartzo de Brilhante (312),Poรงรฃo,bolsa,COMUM,4,3,14,80
+Cristal de รpico (313),Poรงรฃo,bolsa,INCOMUM,2,4,42,100
+Nรบcleo de Lendรกrio (314),Poรงรฃo,bolsa,COMUM,2,3,17,60
+Flor de Sombrio (315),Poรงรฃo,bolsa,COMUM,1,4,48,90
+Seda de Mรกgico (316),Material,inventario,COMUM,1,5,34,90
+Seda de Mรกgico (317),Poรงรฃo,bolsa,INCOMUM,4,6,46,140
+Raiz de Veloz (318),Poรงรฃo,bolsa,COMUM,1,4,42,90
+Pรณ de Cura (319),Material,inventario,COMUM,1,5,35,90
+Seda Espectral do Caos (320),Material,inventario,RARO,25,15,75,470
+Cristal de Tรณxico (321),Poรงรฃo,bolsa,RARO,0,5,135,180
+Alma de Cura (322),Poรงรฃo,bolsa,COMUM,0,2,25,40
+Flor de Lendรกrio (323),Poรงรฃo,bolsa,INCOMUM,8,10,24,200
+Pรณ de Brilhante (324),Poรงรฃo,bolsa,RARO,15,5,205,400
+Seda Antigo da Glรณria (325),Poรงรฃo,bolsa,INCOMUM,2,4,38,90
+Vรณrtice de Ancestral (326),Poรงรฃo,bolsa,COMUM,4,5,47,130
+Cristal de Gรฉlido (327),Poรงรฃo,bolsa,INCOMUM,6,4,78,170
+Elixir de Celeste (328),Poรงรฃo,bolsa,RARO,15,10,145,390
+Vรณrtice รpico Espectral (329),Poรงรฃo,bolsa,EPICO,10,10,340,540
+Orbe de Veloz (330),Material,inventario,COMUM,1,4,26,70
+Seda Carmesim da Profundeza (331),Poรงรฃo,bolsa,RARO,0,10,190,290
+Prisma Ancestral Elemental (332),Poรงรฃo,bolsa,EPICO,50,0,490,990
+Seda de Espectral (333),Poรงรฃo,bolsa,COMUM,4,1,34,80
+รleo de Gรฉlido (334),Poรงรฃo,bolsa,INCOMUM,4,8,38,150
+Raiz de Espectral (335),Poรงรฃo,bolsa,COMUM,1,5,50,110
+Pedra de Tรณxico (336),Poรงรฃo,bolsa,INCOMUM,10,8,38,210
+รleo Celeste Arcana (337),Material,inventario,RARO,0,10,105,200
+Lรกgrima de Veloz (338),Material,inventario,RARO,10,20,65,360
+Fragmento de Sombrio (339),Gema,inventario,INCOMUM,4,0,88,120
+Elixir Cura do Gigante (340),Gema,inventario,COMUM,3,0,20,50
+Raiz de Espectral (341),Poรงรฃo,bolsa,COMUM,2,2,40,80
+Seda de Veloz (342),Poรงรฃo,bolsa,RARO,10,25,115,460
+Quartzo de Antigo (343),Poรงรฃo,bolsa,INCOMUM,8,6,42,180
+รleo de Celeste (344),Poรงรฃo,bolsa,COMUM,3,2,13,60
+Lรกgrima de Gรฉlido (345),Material,inventario,COMUM,4,5,40,130
+Lรกgrima de Pequeno (346),Material,inventario,COMUM,4,0,11,50
+Seda de Cura (347),Poรงรฃo,bolsa,RARO,10,0,60,160
+Elixir de Gรฉlido (348),Poรงรฃo,bolsa,RARO,0,10,185,280
+Pรณ de Lendรกrio (349),Poรงรฃo,bolsa,COMUM,2,2,39,70
+Orbe de รpico (350),Poรงรฃo,bolsa,COMUM,1,3,25,60
+Flor de Cura (351),Poรงรฃo,bolsa,COMUM,3,4,18,80
+Raiz Ancestral da Profundeza (352),Poรงรฃo,bolsa,RARO,20,5,175,420
+Amuleto de Antigo (353),Material,inventario,INCOMUM,6,8,100,240
+Essรชncia de Espectral (354),Poรงรฃo,bolsa,EPICO,0,0,280,280
+Cristal Espectral da Glรณria (355),Poรงรฃo,bolsa,LENDARIO,0,0,400,400
+Prisma de Poderoso (356),Poรงรฃo,bolsa,INCOMUM,8,10,26,200
+Elixir de Tรณxico (357),Gema,inventario,COMUM,5,2,30,100
+รleo de Sombrio (358),Poรงรฃo,bolsa,RARO,10,5,165,310
+Vรณrtice Mรกgico da Profundeza (359),Material,inventario,RARO,0,0,205,200
+Fragmento de Celeste (360),Poรงรฃo,bolsa,INCOMUM,4,4,62,140
+Cristal de Tรณxico (361),Poรงรฃo,bolsa,RARO,25,0,135,380
+Essรชncia de รpico (362),Material,inventario,COMUM,2,0,40,60
+รleo de Cura (363),Poรงรฃo,bolsa,INCOMUM,6,2,44,120
+Flor de Gรฉlido (364),Poรงรฃo,bolsa,INCOMUM,10,6,100,260
+Raiz de Lendรกrio (365),Poรงรฃo,bolsa,INCOMUM,6,4,78,170
+Pรณ de Lendรกrio (366),Gema,inventario,INCOMUM,10,0,80,180
+Pedra de Brilhante (367),Poรงรฃo,bolsa,COMUM,1,1,15,30
+Prisma de Tรณxico (368),Poรงรฃo,bolsa,COMUM,0,1,49,50
+Orbe de Celeste (369),Poรงรฃo,bolsa,RARO,20,15,185,530
+Pรณ de Veloz (370),Poรงรฃo,bolsa,COMUM,3,1,45,80
+Alma de Brilhante (371),Poรงรฃo,bolsa,COMUM,0,0,46,40
+Flor de Tรณxico (372),Poรงรฃo,bolsa,COMUM,3,0,44,70
+Pedra de Celeste (373),Poรงรฃo,bolsa,COMUM,0,3,18,40
+Seda de Ancestral (374),Poรงรฃo,bolsa,INCOMUM,10,4,88,220
+Amuleto รgneo da Glรณria (375),Poรงรฃo,bolsa,EPICO,0,10,210,310
+Elixir รgneo Arcana (376),Poรงรฃo,bolsa,COMUM,2,4,19,70
+Fragmento de Veloz (377),Poรงรฃo,bolsa,COMUM,1,5,44,100
+Elixir de Brilhante (378),Gema,inventario,INCOMUM,8,4,100,220
+Flor de Veloz (379),Poรงรฃo,bolsa,COMUM,0,5,22,70
+Fragmento de Espectral (380),Poรงรฃo,bolsa,COMUM,5,0,41,90
+Quartzo de Cura (381),Poรงรฃo,bolsa,COMUM,2,0,29,40
+Flor de Cura (382),Gema,inventario,COMUM,3,2,11,60
+Pedra de Espectral (383),Poรงรฃo,bolsa,COMUM,4,0,22,60
+Vรณrtice Poderoso Elemental (384),Poรงรฃo,bolsa,INCOMUM,0,6,38,90
+Nรบcleo de Mรกgico (385),Material,inventario,INCOMUM,10,10,26,220
+Vรณrtice de Celeste (386),Poรงรฃo,bolsa,RARO,20,10,50,350
+Raiz de Carmesim (387),Poรงรฃo,bolsa,RARO,0,10,165,260
+Lรกgrima de Sombrio (388),Poรงรฃo,bolsa,RARO,5,10,250,400
+Lรกgrima Pequeno do Gigante (389),Poรงรฃo,bolsa,INCOMUM,10,4,28,160
+Seda de Pequeno (390),Poรงรฃo,bolsa,RARO,10,25,80,430
+Flor de Carmesim (391),Material,inventario,INCOMUM,0,10,40,140
+Seda de รgneo (392),Poรงรฃo,bolsa,INCOMUM,4,0,34,70
+Lรกgrima Lendรกrio Elemental (393),Poรงรฃo,bolsa,INCOMUM,6,6,38,150
+Nรบcleo รpico Arcana (394),Poรงรฃo,bolsa,COMUM,4,5,18,100
+Lรกgrima de Lendรกrio (395),Poรงรฃo,bolsa,COMUM,4,1,33,80
+Vรณrtice Veloz Elemental (396),Poรงรฃo,bolsa,EPICO,10,20,470,770
+Cristal de Lendรกrio (397),Poรงรฃo,bolsa,COMUM,4,2,49,100
+Pรณ de Antigo (398),Poรงรฃo,bolsa,COMUM,1,5,18,70
+Lรกgrima de Antigo (399),Poรงรฃo,bolsa,INCOMUM,10,0,66,160
+Alma de Espectral (400),Poรงรฃo,bolsa,COMUM,2,2,25,60
+Lรกgrima de Veloz (401),Gema,inventario,COMUM,4,1,45,90
+Seda de Celeste (402),Poรงรฃo,bolsa,RARO,15,15,200,500
+Amuleto de รpico (403),Poรงรฃo,bolsa,RARO,5,25,165,460
+Alma de Pequeno (404),Poรงรฃo,bolsa,INCOMUM,10,10,100,300
+Vรณrtice de Ancestral (405),Poรงรฃo,bolsa,INCOMUM,8,8,76,230
+Elixir de Antigo (406),Gema,inventario,LENDARIO,60,20,720,1520
+Essรชncia Ancestral Arcana (407),Poรงรฃo,bolsa,INCOMUM,10,8,56,230
+Raiz Brilhante do Vazio (408),Poรงรฃo,bolsa,RARO,25,10,180,530
+Raiz Sombrio da Glรณria (409),Poรงรฃo,bolsa,EPICO,50,0,420,920
+Elixir de Gรฉlido (410),Poรงรฃo,bolsa,RARO,0,10,50,150
+Flor de Ancestral (411),Material,inventario,COMUM,1,5,48,100
+Lรกgrima Brilhante da Destreza (412),Material,inventario,COMUM,2,1,24,50
+Essรชncia de Mรกgico (413),Poรงรฃo,bolsa,INCOMUM,8,8,28,180
+Pedra de รgneo (414),Material,inventario,INCOMUM,6,8,94,230
+Pรณ Antigo Elemental (415),Poรงรฃo,bolsa,COMUM,4,4,33,110
+Flor de Antigo (416),Material,inventario,LENDARIO,60,40,360,1360
+Elixir de Pequeno (417),Material,inventario,COMUM,3,3,46,100
+Pedra de Sombrio (418),Material,inventario,COMUM,2,5,28,90
+Alma de Carmesim (419),Poรงรฃo,bolsa,COMUM,3,2,25,70
+รleo de Pequeno (420),Poรงรฃo,bolsa,COMUM,0,4,35,70
+Cristal de รgneo (421),Poรงรฃo,bolsa,LENDARIO,80,0,720,1520
+Lรกgrima de Cura (422),Poรงรฃo,bolsa,INCOMUM,10,8,44,220
+Quartzo de Antigo (423),Material,inventario,COMUM,5,3,29,100
+Raiz Brilhante Elemental (424),Poรงรฃo,bolsa,COMUM,2,1,10,40
+Lรกgrima de Espectral (425),Poรงรฃo,bolsa,INCOMUM,6,2,62,140
+Fragmento de Brilhante (426),Poรงรฃo,bolsa,COMUM,5,0,40,90
+Amuleto de Gรฉlido (427),Poรงรฃo,bolsa,COMUM,4,5,13,100
+Vรณrtice de Espectral (428),Poรงรฃo,bolsa,INCOMUM,2,6,78,150
+Pedra de Lendรกrio (429),Poรงรฃo,bolsa,COMUM,1,3,43,80
+Amuleto de Sombrio (430),Poรงรฃo,bolsa,INCOMUM,6,10,88,240
+Elixir de Antigo (431),Poรงรฃo,bolsa,RARO,5,0,105,150
+Pรณ de Gรฉlido (432),Poรงรฃo,bolsa,COMUM,5,0,19,60
+Essรชncia de Veloz (433),Material,inventario,INCOMUM,0,0,70,70
+Elixir de Gรฉlido (434),Poรงรฃo,bolsa,RARO,0,15,135,280
+Lรกgrima de Brilhante (435),Poรงรฃo,bolsa,INCOMUM,10,2,64,180
+Elixir Carmesim Espectral (436),Poรงรฃo,bolsa,RARO,10,10,200,400
+รleo Celeste Proibido (437),Poรงรฃo,bolsa,EPICO,0,10,110,210
+Nรบcleo de รgneo (438),Poรงรฃo,bolsa,COMUM,5,5,35,130
+Raiz de Gรฉlido (439),Poรงรฃo,bolsa,INCOMUM,2,4,70,130
+Essรชncia de Pequeno (440),Poรงรฃo,bolsa,COMUM,2,5,10,80
+Orbe de Gรฉlido (441),Material,inventario,COMUM,2,2,45,80
+Fragmento de Gรฉlido (442),Poรงรฃo,bolsa,INCOMUM,10,0,54,150
+Lรกgrima de Brilhante (443),Poรงรฃo,bolsa,INCOMUM,2,0,88,100
+Elixir Celeste do Vazio (444),Poรงรฃo,bolsa,COMUM,2,3,10,60
+Orbe Veloz da Destreza (445),Material,inventario,INCOMUM,10,10,100,300
+Seda de Mรกgico (446),Poรงรฃo,bolsa,INCOMUM,8,8,82,240
+Flor de Carmesim (447),Poรงรฃo,bolsa,INCOMUM,10,2,94,210
+Pรณ de Ancestral (448),Poรงรฃo,bolsa,COMUM,2,0,23,40
+Quartzo de Sombrio (449),Poรงรฃo,bolsa,COMUM,0,5,45,90
+Cristal de Espectral (450),Poรงรฃo,bolsa,COMUM,3,3,16,70
+Amuleto de Pequeno (451),Poรงรฃo,bolsa,COMUM,0,5,12,60
+Prisma de Pequeno (452),Poรงรฃo,bolsa,COMUM,0,1,14,20
+รleo de Tรณxico (453),Poรงรฃo,bolsa,COMUM,4,0,35,70
+Pedra de Sombrio (454),Poรงรฃo,bolsa,COMUM,4,4,41,120
+Vรณrtice de Tรณxico (455),Poรงรฃo,bolsa,RARO,0,20,220,420
+Raiz de Carmesim (456),Poรงรฃo,bolsa,COMUM,0,3,18,40
+Essรชncia de Mรกgico (457),Material,inventario,COMUM,2,4,23,80
+Pรณ de Tรณxico (458),Poรงรฃo,bolsa,COMUM,5,3,32,110
+Fragmento de Ancestral (459),Poรงรฃo,bolsa,INCOMUM,4,10,68,200
+Quartzo de Espectral (460),Material,inventario,COMUM,0,2,24,40
+รleo de Pequeno (461),Poรงรฃo,bolsa,COMUM,4,1,19,60
+Amuleto de Sombrio (462),Material,inventario,INCOMUM,2,4,50,110
+Pรณ de Gรฉlido (463),Poรงรฃo,bolsa,COMUM,0,4,17,50
+Alma de Cura (464),Poรงรฃo,bolsa,RARO,20,25,220,670
+Flor de Tรณxico (465),Material,inventario,COMUM,0,2,36,50
+Vรณrtice Sombrio do Vazio (466),Poรงรฃo,bolsa,COMUM,5,1,41,100
+Fragmento de Ancestral (467),Material,inventario,INCOMUM,4,4,58,130
+Quartzo de Sombrio (468),Poรงรฃo,bolsa,COMUM,0,4,44,80
+Alma รgneo Arcana (469),Material,inventario,INCOMUM,8,4,88,200
+Pedra de Cura (470),Poรงรฃo,bolsa,COMUM,1,0,22,30
+Alma de Sombrio (471),Poรงรฃo,bolsa,COMUM,1,2,37,60
+Orbe de Gรฉlido (472),Poรงรฃo,bolsa,COMUM,2,4,36,90
+Pรณ de Brilhante (473),Poรงรฃo,bolsa,COMUM,3,0,19,40
+Elixir de Antigo (474),Poรงรฃo,bolsa,COMUM,1,2,25,50
+Nรบcleo Lendรกrio da Destreza (475),Material,inventario,COMUM,5,0,46,90
+Elixir de Gรฉlido (476),Material,inventario,COMUM,2,5,33,100
+Lรกgrima de Pequeno (477),Poรงรฃo,bolsa,COMUM,1,1,10,30
+Cristal de Ancestral (478),Material,inventario,RARO,15,15,170,470
+รleo de Antigo (479),Poรงรฃo,bolsa,INCOMUM,6,0,22,80
+Orbe de Antigo (480),Poรงรฃo,bolsa,COMUM,4,2,47,100
+Fragmento de รpico (481),Gema,inventario,COMUM,2,1,37,60
+Lรกgrima de Cura (482),Poรงรฃo,bolsa,COMUM,5,3,32,110
+Pรณ de Antigo (483),Poรงรฃo,bolsa,COMUM,1,2,14,40
+Flor de Tรณxico (484),Poรงรฃo,bolsa,COMUM,5,2,25,90
+Lรกgrima de Gรฉlido (485),Material,inventario,COMUM,3,5,41,120
+Alma Antigo Espectral (486),Gema,inventario,RARO,10,0,105,200
+Seda de รgneo (487),Poรงรฃo,bolsa,COMUM,0,2,21,40
+Alma de Antigo (488),Poรงรฃo,bolsa,COMUM,0,0,31,30
+Elixir Ancestral da Glรณria (489),Poรงรฃo,bolsa,INCOMUM,4,8,46,160
+Flor Veloz do Gigante (490),Poรงรฃo,bolsa,RARO,25,0,190,440
+Amuleto de Mรกgico (491),Material,inventario,INCOMUM,2,4,38,90
+Alma Lendรกrio Proibido (492),Poรงรฃo,bolsa,COMUM,2,2,19,50
+Elixir de รpico (493),Gema,inventario,INCOMUM,8,6,94,230
+Flor de Brilhante (494),Gema,inventario,RARO,15,0,115,260
+Amuleto de Espectral (495),Poรงรฃo,bolsa,COMUM,2,4,32,90
+Nรบcleo de Sombrio (496),Gema,inventario,COMUM,3,0,48,70
+Essรชncia รgneo Proibido (497),Material,inventario,EPICO,20,20,310,710
+Pรณ Ancestral da Glรณria (498),Poรงรฃo,bolsa,COMUM,4,5,13,100
+Fragmento de Espectral (499),Poรงรฃo,bolsa,COMUM,3,1,28,60
+Alma de Celeste (500),Poรงรฃo,bolsa,INCOMUM,2,10,36,150
